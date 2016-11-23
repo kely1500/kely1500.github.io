@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>Bootstrap Real Estate Website Template</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="css/screen.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/cuteCss.css">
+<!--link rel="stylesheet" href="css/content/newTab.css">
+<link rel="stylesheet" href="css/skin/newTab.css"-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<!--script src="js/jquery-1.11.2.min.js"></script--> 
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+  </style>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body style="padding-top: 70px">
+<nav class="navbar navbar-cute navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topFixedNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+      <a class="navbar-brand" href="#">Brand</a></div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse nav-cute navbar-collapse" id="topFixedNavbar1">
+      <ul class="nav navbar-nav">
+        <li><a id="load-first" href="#"><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span> Bookmarks<span class="sr-only">(current)</span></a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>  Websites Monitoring</a></li>
+        <li><a href="#" role="button" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Social Networks</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown"><a href="#" class="dropdown-toggle" style="padding:9px" data-toggle="dropdown" role="button" aria-expanded="false"><img src="http://i.mdldb.net/_s.jpg" style="width: 32px;
+height: auto;border: 1px solid #023167;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+-ms-border-radius: 100%;
+-o-border-radius: 100%;
+border-radius: 100%; "><span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+<div class="container" id="mainDiv"> </div>
+<div class="segmented-control" style="width: 45%; color: #1387DD">
+<input name="sc-2-1" id="sc-2-1-2" checked="" type="radio" value="1">
+  <input name="sc-2-1" id="sc-2-1-1" type="radio" value="0">
+<label for="sc-2-1-2" data-value="Active monitoring">Active monitorings</label>
+  <label for="sc-2-1-1" data-value="Deactivated monitoring">Deactivated monitorings</label>
+</div>
+<div class="monitorGroup-grid">
+  <div class="monitorGroup row container-fluid">
+  	<div class="row"><div class="col-sm-1" style="width:40px;"><span role="button" class="monitorBack glyphicon glyphicon-chevron-left" aria-hidden="true"></span></div>
+    <h1 class="col-sm-8">Monitor group</h1>
+    
+    <div class="sideBtns col-sm-2" role="group"  aria-label="Vertical button group">
+    <button type="button" class="btn cutebutton">Edit monitoring</button>
+    <button type="button" class="btn cutebutton">Delete monitoring</button>
+    <button type="button" class="btn cutebutton">Stop monitoring</button></div>
+    </div>
+    
+ <div class="sitesList col-sm-6 row " style="margin-top:5px; margin-left:5%; width:65%; ">
+  <div class="list-group">
+     <a class="list-group-item" href="#"><span class="badge">New</span>monitored site 1 </a>
+     <a class="list-group-item" href="#">monitored site 2</a>
+   <a class='list-group-item' href='#'>monitored site 2</a><a class='list-group-item' href='#'>monitored site 2</a><a class='list-group-item' href='#'>monitored site 2</a><a class='list-group-item' href='#'>monitored site 2</a><a class='list-group-item' href='#'>monitored site 2</a><a class='list-group-item' href='#'>monitored site 2</a><a class='list-group-item' href='#'>monitored site 2</a><a class='list-group-item' href='#'>monitored site 2</a>
+ </div></div>
+  </div>
+</div>
+ <script src="js/myQueryScripts.js"></script> 
+</body>
+</html>

@@ -1,0 +1,220 @@
+	
+	/* CSS Document */
+	button.cutebutton{
+		/*border-top: 1px solid #98c2f5;
+	   background: #bed7e8;*/
+	   background:#bbdefb;
+	   background: -webkit-gradient(linear, left top, left bottom, from(#e3f2fd), to(#bbdefb));
+	   background: -webkit-linear-gradient(top, #e3f2fd, #bbdefb);
+	   background: -moz-linear-gradient(top, #e3f2fd, #bbdefb);
+	   background: -ms-linear-gradient(top, #e3f2fd, #bbdefb);
+	   background: -o-linear-gradient(top, #e3f2fd, #bbdefb);
+	   /*padding: 8.5px 15px;*/
+	  
+	   text-decoration: none;
+	   vertical-align: middle;
+	   
+		background-color:#bbdefb;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius:10px;
+		border-color:#bbdefb;
+		
+		color:#023167;
+		font-size: 15px;
+	}
+	button.cutebutton:hover{
+		background:#2196f3;
+		color:#FFFFFF
+	}
+	button.cutebutton:focus{
+		background-color:#1565c0;
+		}
+	 .navbar-cute{
+		 border-top: 4px solid #2196f3;
+ 		 background: #bbdefb;
+		 background: -moz-linear-gradient(top, #bbdefb 0%, #8bc7f8 100%);
+		 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bbdefb), color-stop(100%, #8bc7f8));
+		 background: -webkit-linear-gradient(top, #bbdefb 0%, #8bc7f8 100%);
+	   background: -ms-linear-gradient(top, #bbdefb 0%, #8bc7f8 100%);
+	   background: -o-linear-gradient(top, #bbdefb 0%, #8bc7f8 100%);
+		 background: linear-gradient(top, #bbdefb 0%, #8bc7f8 100%);
+  		color:#023167 !important;
+	 }
+	 .nav-cute >ul> li > a:hover, .nav-cute>ul > li > a:focus{
+		 background-color:#2196f3;
+		 color:#FFFFFF;
+		 }
+	 a{
+		 color:#023167;}
+		 .nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+  background-color: #2196f3;
+  color:#FFFFFF;
+  border-color: #337ab7;
+}
+/*@font-face{
+font-family:'Glyphicons Regular'; 
+src:url('http://glyphicons.com/fonts/glyphicons-regular.eot');	
+	}*/
+	.sideBtns{
+		position:absolute;
+		right:10%;
+		margin-top:1%;
+  display: inline-block;
+  vertical-align: middle;
+		float:right;
+		min-width:140pt;
+		
+		}
+		.sideBtns > button {
+  position: relative;
+  float: none;
+  display:block;
+  width:100%;
+  margin:3px;
+}
+.monitorBack{
+	position: static;
+	margin-top: 15px;
+	font-size: 250%;
+	text-align: left;
+	
+	}
+	.monitorGroup > h1{
+		text-align:start;
+		}
+	.monitorGroup{
+	 border-radius: 25px;
+	 border:0.5px solid #C0BCBC;
+	  box-shadow: 0 1px 15px #A49F9F;
+	  text-decoration: none;
+	  background:#FFFFFF;
+	   background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#EFEAEA));
+	   background: -webkit-linear-gradient(top, #FFFFFF, #EFEAEA);
+	   background: -ms-linear-gradient(top, #FFFFFF, #EFEAEA);
+	   background: -o-linear-gradient(top, #FFFFFF, #EFEAEA);
+		background: -moz-linear-gradient(top, #FFFFFF, #EFEAEA);
+	  transition-property: top, left, opacity, box-shadow, background-color;	
+	  display: block;
+	  height: 120pt;
+	  max-height:400px;
+	  margin: 20px 10px 0px;
+	  width: 90%;
+	  margin-left:5%;
+	  transition: 0.7s ease-out;
+	  
+	  }
+	  .monitorGroup:hover{
+		  box-shadow: 0 0.5px 15px #023167, 0 1px 20px #c1c1c1;
+		  }
+	  .monitorGroup-grid {
+	  -moz-box-flex: 5;
+	  overflow: hidden;
+	  text-align: center;
+	  transition: 100ms ease-out;
+	  transition-property: opacity;
+	  width: 85%;
+	  margin-left:7.5%;
+	height: 100%;
+	margin: .8em auto;
+  display: block;
+  position:relative;
+  padding-bottom:20px;
+	}
+	.list-group{
+		overflow-y:scroll;
+		width:calc(100% + 30pt);
+		padding-right:5%;
+		max-height:230pt;
+		}
+	.list-group>.list-group-item{
+		border-radius:15px;
+		margin-bottom:3px;
+		border:0.5px solid #1976d2;
+		color:#023167;
+		
+		}
+		.list-group>.list-group-item:hover{
+			background-color:#7c4dff;
+			/*box-shadow: 0 0px 15px ;#1976d2;*/
+			color:#FFFFFF;
+			}
+		.list-group>.list-group-item>.badge{
+			background-color:#2196f3;
+			}
+			.list-group>.list-group-item:hover>.badge{
+				border: 0.1px solid #FFFFFF;
+			}
+			.sitesList{
+				position:relative;
+				overflow:hidden;
+				
+				}
+				.cute-panel{
+					border:1pt solid #1976d2 !important;
+					}
+			.cute-panel>.panel-heading{
+				color:#FFFFFF;
+					   background: -webkit-gradient(linear, left top, left bottom, from(#2196f3), to(#1976d2));
+	   background: -webkit-linear-gradient(top, #2196f3, #1976d2);
+	   background: -moz-linear-gradient(top, #2196f3, #1976d2);
+	   background: -ms-linear-gradient(top, #2196f3, #1976d2);
+	   background: -o-linear-gradient(top, #2196f3, #1976d2);
+				}
+				
+				.sitesMonitorLabel{
+					padding-right:5pt;
+				}
+				.sitesMonitorName{
+					width:35%;
+					padding-right:5pt;
+					}
+					.sitesMonitorName>input{
+						width:75%;
+						}
+				.sitesMonitorURL{
+					width:89%;
+					}
+				.cuteModal{
+					width:80% !important;
+				}
+				.cute-tr>td{
+					padding-bottom:8pt;
+					}
+					.closeSite{
+						background: #023167 !important;
+						opacity: 1 !important;
+						color: #FFFF !important;
+						border-radius: 100%;
+						width:15pt;
+						font-size:15pt;
+					}
+					#sitebtn{
+						margin-bottom:5pt;
+						margin-left:5pt;
+						margin-right:5pt;
+					}
+					.panel-fotter{
+						text-align:right;
+						}
+						
+						.keywords{
+							margin-bottom: 10pt;
+							border: 1px solid #1976d2;
+							width: 70%;
+							border-radius:5px;
+							padding-bottom:5pt;
+							}
+							.keywords>input{
+								margin-left: 10pt !important;
+								margin-right: 5pt !important;
+								}
+							.keywords>#keys{
+								width:75%;
+								display:inline-block;	
+								}
+								.keywords>#keyLabel{
+									margin-left:10pt;
+									}
