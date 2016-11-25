@@ -34,10 +34,13 @@
 		});
 
 	
-	$("#active").on("click",".sitesList>>a", function(){
+	$("#active").on("click",".sitesList>>>a", function(){
 		var badge=$(this).find(".badge");
 		if( badge.css("display")!="none"){
 			badge.fadeOut();
+			var old=$(this).closest(".sitesList").find(".oldmonit");
+			var site=$(this).remove();
+			old.prepend(site);
 			}
 		});
 	
@@ -50,7 +53,7 @@
 			
 			$(this).closest(".monitorGroup").find(".restartmonit").delay(300).fadeIn();
 		}
-		var badgeN=$(this).closest(".monitorGroup").find(".sitesList>>>.badge:not(:hidden)").length;
+		var badgeN=$(this).closest(".monitorGroup").find(".sitesList").find(".badge:not(:hidden)").length;
 		if(badgeN>0){
 			var b=$(this).closest(".monitorGroup").find(".monitor-badge");
 			b.text(badgeN);
@@ -71,10 +74,20 @@
 			
 			}
 	});
+	var toDelete;
 	$(".monitorGroup-grid").on('click', '#delete-monit', function(){
-		var monigroup=$(this).closest(".monitorGroup");
-		monigroup.remove();
+		
+		var modal='Are you sure you want to delete the '+$(this).closest(".monitorGroup").find("h1").text()+' monitoring?';
+		$("#confirmDelete").find(".modal-body>p").text(modal);
+		
+		$("#confirmDelete").modal('show');
+		toDelete=$(this).closest(".monitorGroup");
+		
 		});
+		$("#confirm").click(function(){
+			toDelete.fadeIn();
+			toDelete.remove();
+			});
 	
 	$("#deactive").on("click","#stop-monit", activate);
 	
@@ -99,7 +112,7 @@
 	$("#active").on("click","#stop-monit",function(){
 		
 		var monigroup=$(this).closest(".monitorGroup");
-		monigroup.find(".sitesList>>>.badge:not(:hidden)").hide();
+		monigroup.find(".sitesList").find(".badge:not(:hidden)").hide();
 		monigroup.find("#stop-monit").text("Start monitoring");
 		
 		monigroup.find(".restartmonit").hide();

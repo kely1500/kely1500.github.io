@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Bookmarks </title>
+<meta charset = "utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/content/newTab.css">
+<link rel="stylesheet" href="css/content/newTab.css">
+<link rel="stylesheet" href="css/skin/newTab.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script src="js/bookmarksscripts.js"></script> 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<style>
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  font-family:verdana;
+  background-color: #FFF;
+  padding: 50px;
+}
+h1{
+  text-align: center;
+  border-bottom: 2px solid #009;
+  margin-bottom: 50px;
+}
+/*rules for navigation menu*/
+ul#navmenu, ul.sub1, ul.sub2{
+  list-style-type: none;
+  font-size: 9pt;
+  z-index: 1;
+
+}
+ul#navmenu li{
+  width: 125px;
+  text-align: center;
+  position: relative;
+  /*float: left;*/
+  margin-right: 4px;
+}
+ul#navmenu a {
+  text-decoration: none;
+  display: block;
+  width: 150px;
+  line-height: 25px;
+  background-color: #7c61b3;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+color: #FFFFFF;
+}
+ul#navmenu .sub1 a{
+  margin-top: 3px;
+color:#FFFFFF;
+}
+ul#navmenu .sub2 a{
+  margin-left: 8px;
+color:#FFFFFF;
+}
+ul#navmenu li:hover > a {
+  background-color: #337ab7;
+}
+ul#navmenu li:hover a:hover {
+background-color: #337ab7;
+}
+ul#navmenu ul.sub1{
+  display: none;
+  position:absolute;
+  top: 0px;
+  left: 151px;
+}
+ul#navmenu ul.sub2{
+  display: none;
+  position:absolute;
+  top: 0px;
+  left: 142px;
+}
+ul#navmenu li:hover .sub1{
+  display: block;
+}
+ul#navmenu .sub1 li:hover .sub2{
+  display: block;
+}
+.rarrow{
+  font-size: 11pt;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  left: 110px;
+}
+.remove{
+  font-size: 13pt;
+  font-weight: 300;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  left: 128px;
+  color: black;
+}
+form#but{
+    margin-left: 1130px;
+}
+form#but .btn:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+div#butedit .btn:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+div#buttons {
+  margin-left: 450px;
+  margin-bottom: 25px;
+}
+form#newWebsiteForm{
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+div#cate{
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+h2{
+  margin-left: 5px;
+}
+div#thumbnails{
+ /* width: 80%;*/
+  float: left;
+  margin-left: 7%;
+  display: inline;
+  background-color: #fbf7f7;
+  min-height:300pt;
+}
+div#panel{
+width: 13%;
+  float: left;
+}
+img.imag1{
+    display: inline-block;
+    border: 2px solid #9768ce;
+    border-radius: 4px;
+    padding: 3px;
+    margin-bottom: 5px;
+    text-align: center;
+    position: relative;
+    margin-left: 5px;
+}
+img.imag1:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+header#headerCategories{
+color: #000000;
+text-align: center;
+}
+h3{
+  font-family: Georgia, serif;
+  color: #337ab7;
+}
+div#myModalCategory{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin-top: 313px;
+}
+div.images1{
+/*  display: flex;*/
+  text-align: center;
+  margin-left: 10%;
+}
+div.images{
+/*  display: flex;*/
+  text-align: center;
+  padding: 0% 13%;
+}
+div#editcategories{
+  background-color: #fbf7f7;
+}
+div#newCategorybutton{
+  margin-bottom: 5px;
+}
+div#addNewCategoryButton{
+  margin-bottom: 5px;
+}
+span.glyphicon{
+  margin-left: 570px;
+  position: absolute;
+  margin-top: 5px;
+}
+span#addNCat{
+  margin-left: 420px;
+}
+div#thumbnails2, #thumbnails3,#thumbnails4,#thumbnails5, #thumbnails6, #thumbnails7,#thumbnails8,#thumbnails9,#thumbnails10,#thumbnails11,#thumbnails12,#thumbnails13,#thumbnails14{
+  display: none;
+  width: 80%;
+  float: left;
+  margin-left: 10px;
+  background-color: #fbf7f7;
+}
+span#pencil{
+   width:25px;
+   height:25px;
+   display: block;
+   float: left;
+   margin-left: 18px;
+   position: absolute;
+   margin-top: 15px;
+   font-weight: bold;
+   background-color: #FFFFFF;
+   border-radius: 100%;
+   text-align: center;
+   padding: 5px;
+   border: 1pt solid #000000;
+ }
+
+span#tirar{
+   width:25px;
+   height:25px;
+   display: block;
+   float: left;
+   margin-left: 135px;
+   position: absolute;
+   margin-top: 15px;
+   font-weight: bold;
+   background-color: #FFFFFF;
+   border-radius: 100%;
+   text-align: center;
+   padding: 5px;
+   border: 1pt solid #000000;
+
+}
+div#imagem{
+  width:170px;
+  text-align:center;
+  float:left;
+  padding-top:10px;
+  padding-bottom:10px;
+  position:relative;
+}
+</style>
+</head>
+<body>
+<form id = "but" >
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add new website</button>
+</form>
+<div id = "bookmarks">
+<h1>Bookmarks</h1>
+<div id = "panel">
+<ul id = "navmenu">
+<div id = "navmenu_principal" class = "oi">
+<li id = "All"><a href="#">All</a></li>
+<li id = "Series"><a href="#">Series</a><span class="rarrow">&#9654;</span>
+  <ul class = "sub1">
+    <li id = "GOT"><a href="#">GOT</a></li>
+    <li id = "Arrow"><a href="#">Arrow</a></li>
+    <li id = "Flash"><a href="#">Flash</a></li>
+  </ul>
+</li>
+<li id = "Sinfonia"><a href="#">Sinfonia</a></li>
+<li id = "Musica"><a href="#">Música</a><span class="rarrow">&#9654;</span>
+  <ul class = "sub1">
+    <li id = "MetalCore"><a href="#">MetalCore</a></li>
+    <li id = "Country"><a href="#">Country</a></li>
+    <li id = "Pop"><a href="#">Pop</a><span class="rarrow">&#9654;</span>
+      <ul class = "sub2">
+        <li id = "K-pop"><a href="#">K-pop</a></li>
+        <li id = "R-pop"><a href="#">R-pop</a></li>
+        <li id = "J-pop"><a href="#">J-pop</a></li>
+      </ul>
+    </li>
+  </ul>
+</li>
+<li id = "Jardinagem"><a href="#">Jardinagem</a></li>
+</ul>
+<div id = "butedit" >
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalForNewCategories">Edit Categories </button>
+</div>
+</div>
+
+<div id = "thumbnails" class = "col-sm-9 panel panel-default">
+<header id = "headerCategories">
+<h3>All</h3>
+</header>
+<div class="images">
+<div id = "imagem">
+<p><a href="http://www.facebook.com"target="_blank"><img  src="img/face.jpeg" height="120" width="160" class= "imag1"></img><br>Facebook</a></p>
+<span id = "pencil" class="glyphicon glyphicon-pencil"></span>
+<span id = "tirar" class="bookm-remove glyphicon glyphicon-remove"></span>
+</div>
+<div id = "imagem">
+<p><a href="http://www.google.com" target="_blank"><img  draggable="true" src="img/google.jpg" height="120" width="160" class= "imag1"/><br>Google</a></p>
+<span id = "pencil" class="glyphicon glyphicon-pencil"></span>
+<span id = "tirar" class="bookm-remove glyphicon glyphicon-remove"></span>
+</div>
+<div id = "imagem">
+<p><a href="http://www.gmail.com" target="_blank"><img src="img/gmail.png" height="120" width="160"  class= "imag1"/><br>Gmail</a></p>
+<span id = "pencil" class="glyphicon glyphicon-pencil"></span>
+<span id = "tirar" class="bookm-remove glyphicon glyphicon-remove"></span>
+</div>
+
+<div id = "imagem">
+<p><a href="http://www.youtube.com"target="_blank"><img  src="img/image_not_found.jpg" height="120" width="160" class= "imag1"/><br>Youtube</a></p>
+<span id = "pencil" class="glyphicon glyphicon-pencil"></span>
+<span id = "tirar" class="bookm-remove glyphicon glyphicon-remove"></span>
+</div>
+<div id = "imagem">
+<p><a href="http://www.outlook.com" target="_blank"><img  src="img/image_not_found.jpg" height="120" width="160" class= "imag1"/><br>Outlook</a></p>
+<span id = "pencil" class="glyphicon glyphicon-pencil"></span>
+<span id = "tirar" class="bookm-remove glyphicon glyphicon-remove"></span>
+</div>
+<div id = "imagem">
+  <p><a href="http://www.vlive.tv/home" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160" class= "imag1"/><br>V App</a></p>
+<span id = "pencil" class="glyphicon glyphicon-pencil"></span>
+<span id = "tirar" class="bookm-remove glyphicon glyphicon-remove"></span>
+</div>
+</div>
+<br>
+<div class="images1">
+</div>
+</div>
+</div>
+<div class="modal fade" id="myModal" role="dialog">
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <h2>New Website</h2>
+     <form id = "newWebsiteForm">
+       <div class="form-group">
+         <label for="name">Website name:</label>
+         <input type="name" class="form-control" id="name">
+       </div>
+       <div class="form-group">
+         <label for="url">URL:</label>
+         <input type="url" class="form-control" id="url">
+       </div>
+       <div class="form-group">
+         <label for="desc">Site Description:</label>
+         <input type="desc" class="form-control" id="desc">
+       </div>
+       <div class="form-group">
+         <label for="desc">Categories:</label>
+         <ul id = "navmenu">
+           <div id = "novasCategorias">
+             <!--vao ser acrescentadas coisas aqui dinamicamente-->
+           </div>
+           </ul>
+         <div id = "but+" >
+           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCategory">+ Category</button>
+         </div>
+       </div>
+     </form>
+     <div id = "buttons" >
+       <button type="button" id = "okBtn" class="btn btn-primary" data-dismiss="modal">Add</button>
+       <button type="button" id = "cancelbtn" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+     </div>
+   </div>
+ </div>
+</div>
+<div class="modal fade" id="myModalCategory" role="dialog">
+<div class="modal-dialog">
+<!-- <div class="modal-dialog">-->
+   <div class="modal-content" id = "categories">
+     <div id = cate>
+       <span class="glyphicon glyphicon-remove" data-dismiss="modal"></span></p>
+     <ul id = "navmenu">
+       <div id = "modalParaCategorias" class = "oi">
+       <li><a href="#">Séries</a></li>
+       <li><a href="#">Dramas</a><span class="rarrow">&#9654;</span>
+         <ul class = "sub1">
+           <li><a href="#">Descendants of the Sun</a></li>
+           <li><a href="#">Dream Knight</a></li>
+           <li><a href="#">Shopping King Louie</a></li>
+         </ul>
+       </li>
+       <li><a href="#">Sinfonia</a></li>
+       <li><a href="#">Música</a><span class="rarrow">&#9654;</span>
+         <ul class = "sub1">
+           <li><a href="#">MetalCore</a></li>
+           <li><a href="#">Country</a></li>
+           <li><a href="#">Pop</a><span class="rarrow">&#9654;</span>
+             <ul class = "sub2">
+               <li><a href="#">K-pop</a></li>
+               <li><a href="#">R-pop</a></li>
+               <li><a href="#">J-pop</a></li>
+             </ul>
+           </li>
+         </ul>
+       </li>
+       <li><a href="#">Jardinagem</a></li>
+     </div>
+     </ul>
+   </div>
+   </div>
+ </div>
+   </div>
+<!--   </div>-->
+
+<div id = "thumbnails2" class = "panel panel-default">
+<header id = "headerCategories">
+<h3>Series</h3>
+</header>
+<div class="images">
+<p><a href="http://www.watch-episodes.co/the-flash" target="_blank"><img  draggable="true" src="img/image_not_found.jpg" height="120" width="160" class= "imag1"/><br>Flash</a></p>
+<p><a href="http://www.watch-episodes.co/arrow" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>Arrow</a></p>
+<p><a href="http://www.watch-episodes.co/game-of-thrones"target="_blank"><img  src="img/image_not_found.jpg" height="120" width="160" class= "imag1"/><br>GOT</a></p>
+</div>
+<br>
+<div class="images">
+<p><a href="http://www.watch-episodes.co/lucifer"target="_blank"><img  src="img/image_not_found.jpg" height="120" width="160" class= "imag1"/><br>Lucifer</a></p>
+</div>
+</div>
+<div id = "thumbnails3" class = "panel panel-default">
+<header id = "headerCategories">
+<h3>GOT</h3>
+</header>
+<div class="images">
+  <p><a href="http://www.watch-episodes.co/game-of-thrones"target="_blank"><img  src="img/image_not_found.jpg" height="120" width="160" class= "imag1"/><br>GOT</a></p>
+</div>
+<br>
+<div class="images">
+</div>
+</div>
+<div id = "thumbnails4" class = "panel panel-default">
+<header id = "headerCategories">
+<h3>Flash</h3>
+</header>
+<div class="images">
+  <p><a href="http://www.watch-episodes.co/the-flash" target="_blank"><img  draggable="true" src="img/image_not_found.jpg" height="120" width="160" class= "imag1"/><br>Flash</a></p>
+</div>
+<br>
+<div class="images">
+</div>
+</div>
+
+<div id = "thumbnails5" class = "panel panel-default">
+<header id = "headerCategories">
+<h3>Arrow</h3>
+</header>
+<div class="images">
+  <p><a href="http://www.watch-episodes.co/arrow" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>Arrow</a></p>
+</div>
+<br>
+<div class="images">
+</div>
+</div>
+<div id = "thumbnails6" class = "panel panel-default">
+<header id = "headerCategories">
+<h3>Sinfonia</h3>
+</header>
+<div class="images">
+  <p><a href="https://www.youtube.com/watch?v=t3217H8JppI" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>9º Sinfonia</a></p>
+</div>
+<br>
+<div class="images">
+</div>
+</div>
+<div id = "thumbnails7" class = "panel panel-default">
+<header id = "headerCategories">
+<h3>Música</h3>
+</header>
+<div class="images">
+  <p><a href="https://pt.wikipedia.org/wiki/M%C3%BAsica" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>Musica</a></p>
+</div>
+<br>
+<div class="images">
+</div>
+</div>
+<div id = "thumbnails8" class = "panel panel-default">
+<header id = "headerCategories">
+<h3>MetalCore</h3>
+</header>
+<div class="images">
+  <p><a href="https://pt.wikipedia.org/wiki/Metalcore" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>Metal Core</a></p>
+</div>
+<br>
+<div class="images">
+</div>
+</div>
+<div id = "thumbnails9" class = "panel panel-default">
+<header id = "headerCategories">
+<h3>Country</h3>
+</header>
+<div class="images">
+  <p><a href="https://pt.wikipedia.org/wiki/M%C3%BAsica_country" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>Country</a></p>
+</div>
+<br>
+<div class="images">
+</div>
+</div>
+<div id = "thumbnails10" class = "panel panel-default">
+<header id = "headerCategories">
+<h3>Pop</h3>
+</header>
+<div class="images">
+  <p><a href="https://pt.wikipedia.org/wiki/M%C3%BAsica_pop" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>Pop</a></p>
+</div>
+<br>
+<div class="images">
+</div>
+</div>
+<div id = "thumbnails11" class = "panel panel-default">
+<header id = "headerCategories">
+<h3>K-Pop</h3>
+</header>
+<div class="images">
+  <p><a href="https://pt.wikipedia.org/wiki/K-pop" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>K-pop</a></p>
+</div>
+<br>
+<div class="images">
+</div>
+</div>
+<div id = "thumbnails12" class = "panel panel-default">
+<header id = "headerCategories">
+<h3>R-Pop</h3>
+</header>
+<div class="images">
+  <p><a href="https://en.wikipedia.org/wiki/Russian_pop" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>R-pop</a></p>
+</div>
+<br>
+<div class="images">
+</div>
+</div>
+<div id = "thumbnails13" class = "panel panel-default">
+<header id = "headerCategories">
+<h3>J-Pop</h3>
+</header>
+<div class="images">
+  <p><a href="https://pt.wikipedia.org/wiki/J-pop" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>J_pop</a></p>
+</div>
+<br>
+<div class="images">
+</div>
+</div>
+<div id = "thumbnails14" class = "panel panel-default">
+<header id = "headerCategories">
+<h3>Jardinagem</h3>
+</header>
+<div class="images">
+  <p><a href="http://www.gardendesign.com/" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>Garden Design</a></p>
+</div>
+<br>
+<div class="images">
+</div>
+</div>
+<div class="modal fade" id="modalForNewCategories" role="dialog">
+<div class="modal-dialog">
+<!-- <div class="modal-dialog">-->
+  <div class="modal-content" id = "editcategories">
+    <div id = cate>
+      <span class="glyphicon glyphicon-remove" data-dismiss="modal"></span>
+    <ul id = "navmenu">
+      <div id = "c" class = "oi">
+      <li><a href="#">Séries</a><span class="remove">&#10006;</span></li>
+      <li><a href="#">Dramas</a><span class="rarrow">&#9654;</span><span class="remove">&#10006;</span>
+        <ul class = "sub1">
+          <li><a href="#">Descendants of the Sun</a><span class="remove">&#10006;</span></li>
+          <li><a href="#">Dream Knight</a><span class="remove">&#10006;</span></li>
+          <li id = list><a href="#">Shopping King Louie</a><span class="remove">&#10006;</span></li>
+        </ul>
+      </li>
+      <li><a href="#">Sinfonia</a><span class="remove">&#10006;</span></li>
+      <li><a href="#">Música</a><span class="rarrow">&#9654;</span><span class="remove">&#10006;</span>
+        <ul class = "sub1">
+          <li><a href="#">MetalCore</a><span class="remove">&#10006;</span></li>
+          <li><a href="#">Country</a><span class="remove">&#10006;</span></li>
+          <li><a href="#">Pop</a><span class="rarrow">&#9654;</span><span class="remove">&#10006;</span>
+            <ul class = "sub2">
+              <li><a href="#">K-pop</a><span class="remove">&#10006;</span></li>
+              <li><a href="#">R-pop</a><span class="remove">&#10006;</span></li>
+              <li><a href="#">J-pop</a><span class="remove">&#10006;</span></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li id = "1"><a href="#">Jardinagem</a><span class="remove">&#10006;</span></li>
+      <li><a href="#">Jardinagem</a><span class="remove">&#10006;</span></li>
+    </div>
+    </ul>
+    <div id = "newCategorybutton" >
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newCategory">New Category</button>
+    </div>
+  </div>
+  </div>
+<!--   </div>-->
+</div>
+</div>
+<div class="modal fade" id="newCategory" role="dialog">
+<div class="modal-dialog">
+<!-- <div class="modal-dialog">-->
+  <div class="modal-content">
+    <form id = "newWebsiteForm">
+      <div class="form-group">
+        <div>
+          <label for="name">Category name:</label>
+          <span id = "addNCat" class="glyphicon glyphicon-remove" data-dismiss="modal"></span></p>
+        </div>
+        <input type="name" class="form-control" id="categoryname">
+      </div>
+        <div id = "addNewCategoryButton" >
+          <button type="button" class="btn btn-primary">Add</button>
+        </div>
+      </div>
+    </form>
+  </div>
+<!--   </div>-->
+</div>
+</div>
+</div>
+<script>
+
+$("#addNewCategoryButton").click(function () {
+  var selectedVal = $('#categoryname').val();
+  $('div#c').append('<li id ="' +selectedVal+ '"><a href="#">'+selectedVal+'</a><span class="remove">&#10006;</span></li>');
+  $('div#navmenu_principal').append('<li id ="' +selectedVal+ '"><a href="#">'+selectedVal+'</a></li>');
+  $('div#modalParaCategorias').append('<li id ="' +selectedVal+ '"><a href="#">'+selectedVal+'</a></li>');
+});
+
+$("div#novasCategorias").on('click', 'li',function (event) {
+  alert("Do you want to disassociate this category from this website?")
+  $(this).closest('li').remove();
+});
+
+$("div#c").on('click', 'span',function (event) {
+  alert("Do you want to remove this category from your bookmark?")
+  $(this).closest('li').remove();
+  $("div.oi").closest('li').remove();
+
+});
+
+$("li#All").click(function(){
+  $("#thumbnails14").hide();
+  $("#thumbnails13").hide();
+  $("#thumbnails12").hide();
+  $("#thumbnails11").hide();
+  $("#thumbnails10").hide();
+  $("#thumbnails9").hide();
+  $("#thumbnails8").hide();
+  $("#thumbnails7").hide();
+  $("#thumbnails6").hide();
+  $("#thumbnails5").hide();
+  $("#thumbnails4").hide();
+  $("#thumbnails3").hide();
+  $("#thumbnails2").hide();
+  $("#thumbnails").show();
+});
+
+$("li#Series").click(function(){
+  $("#thumbnails14").hide();
+  $("#thumbnails13").hide();
+  $("#thumbnails12").hide();
+  $("#thumbnails11").hide();
+  $("#thumbnails10").hide();
+  $("#thumbnails9").hide();
+  $("#thumbnails8").hide();
+  $("#thumbnails7").hide();
+  $("#thumbnails6").hide();
+  $("#thumbnails5").hide();
+  $("#thumbnails4").hide();
+  $("#thumbnails3").hide();
+  $("#thumbnails2").show();
+  $("#thumbnails").hide();
+});
+
+$("li#GOT").click(function(){
+  $("#thumbnails14").hide();
+  $("#thumbnails13").hide();
+  $("#thumbnails12").hide();
+  $("#thumbnails11").hide();
+  $("#thumbnails10").hide();
+  $("#thumbnails9").hide();
+  $("#thumbnails8").hide();
+  $("#thumbnails7").hide();
+  $("#thumbnails6").hide();
+  $("#thumbnails5").hide();
+  $("#thumbnails4").hide();
+  $("#thumbnails3").show();
+  $("#thumbnails2").hide();
+  $("#thumbnails").hide();
+});
+
+$("li#Flash").click(function(){
+  $("#thumbnails14").hide();
+  $("#thumbnails13").hide();
+  $("#thumbnails12").hide();
+  $("#thumbnails11").hide();
+  $("#thumbnails10").hide();
+  $("#thumbnails9").hide();
+  $("#thumbnails8").hide();
+  $("#thumbnails7").hide();
+  $("#thumbnails6").hide();
+  $("#thumbnails5").hide();
+  $("#thumbnails4").show();
+  $("#thumbnails3").hide();
+  $("#thumbnails2").hide();
+  $("#thumbnails").hide();
+});
+
+$("li#Arrow").click(function(){
+  $("#thumbnails14").hide();
+  $("#thumbnails13").hide();
+  $("#thumbnails12").hide();
+  $("#thumbnails11").hide();
+  $("#thumbnails10").hide();
+  $("#thumbnails9").hide();
+  $("#thumbnails8").hide();
+  $("#thumbnails7").hide();
+  $("#thumbnails6").hide();
+  $("#thumbnails5").show();
+  $("#thumbnails4").hide();
+  $("#thumbnails3").hide();
+  $("#thumbnails2").hide();
+  $("#thumbnails").hide();
+});
+
+$("li#Sinfonia").click(function(){
+  $("#thumbnails14").hide();
+  $("#thumbnails13").hide();
+  $("#thumbnails12").hide();
+  $("#thumbnails11").hide();
+  $("#thumbnails10").hide();
+  $("#thumbnails9").hide();
+  $("#thumbnails8").hide();
+  $("#thumbnails7").hide();
+  $("#thumbnails6").show();
+  $("#thumbnails5").hide();
+  $("#thumbnails4").hide();
+  $("#thumbnails3").hide();
+  $("#thumbnails2").hide();
+  $("#thumbnails").hide();
+});
+
+$("li#Musica").click(function(){
+    $("#thumbnails14").hide();
+    $("#thumbnails13").hide();
+    $("#thumbnails12").hide();
+    $("#thumbnails11").hide();
+    $("#thumbnails10").hide();
+    $("#thumbnails9").hide();
+    $("#thumbnails8").hide();
+    $("#thumbnails7").show();
+    $("#thumbnails6").hide();
+    $("#thumbnails5").hide();
+    $("#thumbnails4").hide();
+    $("#thumbnails3").hide();
+    $("#thumbnails2").hide();
+    $("#thumbnails").hide();
+});
+$("li#MetalCore").click(function(){
+    $("#thumbnails14").hide();
+    $("#thumbnails13").hide();
+    $("#thumbnails12").hide();
+    $("#thumbnails11").hide();
+    $("#thumbnails10").hide();
+    $("#thumbnails9").hide();
+    $("#thumbnails8").show();
+    $("#thumbnails7").hide();
+    $("#thumbnails6").hide();
+    $("#thumbnails5").hide();
+    $("#thumbnails4").hide();
+    $("#thumbnails3").hide();
+    $("#thumbnails2").hide();
+    $("#thumbnails").hide();
+});
+$("li#Country").click(function(){
+  $("#thumbnails14").hide();
+  $("#thumbnails13").hide();
+  $("#thumbnails12").hide();
+  $("#thumbnails10").hide();
+  $("#thumbnails9").show();
+  $("#thumbnails8").hide();
+  $("#thumbnails7").hide();
+  $("#thumbnails6").hide();
+  $("#thumbnails5").hide();
+  $("#thumbnails4").hide();
+  $("#thumbnails3").hide();
+  $("#thumbnails2").hide();
+  $("#thumbnails").hide();
+});
+$("li#Pop").click(function(){
+  $("#thumbnails14").hide();
+  $("#thumbnails13").hide();
+  $("#thumbnails12").hide();
+  $("#thumbnails11").hide();
+  $("#thumbnails10").show();
+  $("#thumbnails9").hide();
+  $("#thumbnails8").hide();
+  $("#thumbnails7").hide();
+  $("#thumbnails6").hide();
+  $("#thumbnails5").hide();
+  $("#thumbnails4").hide();
+  $("#thumbnails3").hide();
+  $("#thumbnails2").hide();
+  $("#thumbnails").hide();
+});
+$("li#K-pop").click(function(){
+  $("#thumbnails14").hide();
+  $("#thumbnails13").hide();
+  $("#thumbnails12").hide();
+  $("#thumbnails11").show();
+  $("#thumbnails10").hide();
+  $("#thumbnails9").hide();
+  $("#thumbnails8").hide();
+  $("#thumbnails7").hide();
+  $("#thumbnails6").hide();
+  $("#thumbnails5").hide();
+  $("#thumbnails4").hide();
+  $("#thumbnails3").hide();
+  $("#thumbnails2").hide();
+  $("#thumbnails").hide();
+});
+$("li#R-pop").click(function(){
+  $("#thumbnails14").hide();
+  $("#thumbnails13").hide();
+  $("#thumbnails12").show();
+  $("#thumbnails11").hide();
+  $("#thumbnails10").hide();
+  $("#thumbnails9").hide();
+  $("#thumbnails8").hide();
+  $("#thumbnails7").hide();
+  $("#thumbnails6").hide();
+  $("#thumbnails5").hide();
+  $("#thumbnails4").hide();
+  $("#thumbnails3").hide();
+  $("#thumbnails2").hide();
+  $("#thumbnails").hide();
+});
+$("li#J-pop").click(function(){
+  $("#thumbnails14").hide();
+  $("#thumbnails13").show();
+  $("#thumbnails12").hide();
+  $("#thumbnails11").hide();
+  $("#thumbnails10").hide();
+  $("#thumbnails9").hide();
+  $("#thumbnails8").hide();
+  $("#thumbnails7").hide();
+  $("#thumbnails6").hide();
+  $("#thumbnails5").hide();
+  $("#thumbnails4").hide();
+  $("#thumbnails3").hide();
+  $("#thumbnails2").hide();
+  $("#thumbnails").hide();
+});
+$("li#Jardinagem").click(function(){
+  $("#thumbnails14").show();
+  $("#thumbnails13").hide();
+  $("#thumbnails12").hide();
+  $("#thumbnails11").hide();
+  $("#thumbnails10").hide();
+  $("#thumbnails9").hide();
+  $("#thumbnails8").hide();
+  $("#thumbnails7").hide();
+  $("#thumbnails6").hide();
+  $("#thumbnails5").hide();
+  $("#thumbnails4").hide();
+  $("#thumbnails3").hide();
+  $("#thumbnails2").hide();
+  $("#thumbnails").hide();
+});
+$('div#modalParaCategorias').on('click', 'a', function(event){
+    var text = $(event.target).text();
+    $('div#novasCategorias').append('<li id ="' +text+ '"><a href="#">'+text+'</a><span class="remove">&#10006;</span></li>');
+});
+
+$("#okBtn").click(function () {
+var selectedname = $('#name').val();
+var selectedurl = $('#url').val();
+  $('div.images').append('<div id="imagem"><p><a href="' +selectedurl + '" target="_blank"><img src="img/image_not_found.jpg" class="imag1" width="160" height="120"><br>'+ selectedname+'</a></p><span id="pencil" class="glyphicon glyphicon-pencil"></span><span id="tirar" class="bookm-remove glyphicon glyphicon-remove"></span></div>');
+});
+
+</script>
+</body>
+</html>

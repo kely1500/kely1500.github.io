@@ -129,22 +129,23 @@
 		  padding-right:5%;
 		  max-height:230pt;
 		  }
-	  .list-group>.list-group-item{
+	  .recentmonit>.list-group-item, .oldmonit>.list-group-item{
 		  border-radius:15px;
 		  margin-bottom:3px;
 		  border:0.5px solid #1976d2;
 		  color:#023167;
 		  
 		  }
-		  .list-group>.list-group-item:hover{
+		  
+		  .recentmonit>.list-group-item:hover, .oldmonit>.list-group-item:hover{
 			  background-color:#7c4dff;
 			  /*box-shadow: 0 0px 15px ;#1976d2;*/
 			  color:#FFFFFF;
 			  }
-		  .list-group>.list-group-item>.badge{
+		  .recentmonit>.list-group-item>.badge, .oldmonit>.list-group-item>.badge{
 			  background-color:#2196f3;
 			  }
-			  .list-group>.list-group-item:hover>.badge{
+			.recentmonit>.list-group-item:hover>.badge, .oldmonit>.list-group-item:hover>.badge{
 				  border: 0.1px solid #FFFFFF;
 			  }
 			  .sitesList{
@@ -175,7 +176,7 @@
 						  width:75%;
 						  }
 				  .sitesMonitorURL{
-					  width:88%;
+					  width:87%;
 					  }
 				  .cuteModal{
 					  width:80% !important;
