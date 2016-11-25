@@ -13,28 +13,15 @@
 <link rel="stylesheet" href="css/cuteCss.css">
 <!--link rel="stylesheet" href="css/content/newTab.css">
 <link rel="stylesheet" href="css/skin/newTab.css"-->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<!--script src="js/jquery-1.11.2.min.js"></script--> 
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="js/jquery-1.11.2.min.js"></script> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="js/bootstrap.min.js"></script>
-  <style>
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 550px}
-    
-    /* Set gray background color and 100% height */
-    .sidenav {
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-        
-    /* On small screens, set height to 'auto' for the grid */
-    @media screen and (max-width: 767px) {
-      .row.content {height: auto;} 
-    }
-  </style>
+  
+
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -48,13 +35,14 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topFixedNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-      <a class="navbar-brand" href="#">Brand</a></div>
+      <a class="navbar-brand" style="padding-top:1pt;padding-bottom:1pt;"><img src="img/web_text3.png" style="width:60pt;" alt=""/></a></div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse nav-cute navbar-collapse" id="topFixedNavbar1">
       <ul class="nav navbar-nav">
-        <li><a id="load-first" href="#"><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span> Bookmarks<span class="sr-only">(current)</span></a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>  Websites Monitoring</a></li>
-        <li><a href="#" role="button" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Social Networks</a>
+      <li><a id="home" href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home<span class="sr-only">(current)</span></a></li>
+        <li><a id="bookmark" href="bookmarks.html"><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span> Bookmarks<span class="sr-only">(current)</span></a></li>
+        <li><a href="monitoring.html"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>  Websites Monitoring</a></li>
+        <li><a href="social.html" role="button" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Social Networks</a>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -75,32 +63,7 @@ border-radius: 100%; "><span class="caret"></span></a>
   </div>
   <!-- /.container-fluid -->
 </nav>
-<div class="container" id="mainDiv"> </div>
-<div class="segmented-control" style="width: 45%; color: #1387DD">
-<input name="sc-2-1" id="sc-2-1-2" checked="" type="radio" value="1">
-  <input name="sc-2-1" id="sc-2-1-1" type="radio" value="0">
-<label for="sc-2-1-2" data-value="Active monitoring">Active monitorings</label>
-  <label for="sc-2-1-1" data-value="Deactivated monitoring">Deactivated monitorings</label>
-</div>
-<div class="monitorGroup-grid">
-  <div class="monitorGroup row container-fluid">
-  	<div class="row"><div class="col-sm-1" style="width:40px;"><span role="button" class="monitorBack glyphicon glyphicon-chevron-left" aria-hidden="true"></span></div>
-    <h1 class="col-sm-8">Monitor group</h1>
-    
-    <div class="sideBtns col-sm-2" role="group"  aria-label="Vertical button group">
-    <button type="button" class="btn cutebutton">Edit monitoring</button>
-    <button type="button" class="btn cutebutton">Delete monitoring</button>
-    <button type="button" class="btn cutebutton">Stop monitoring</button></div>
-    </div>
-    
- <div class="sitesList col-sm-6 row " style="margin-top:5px; margin-left:5%; width:65%; ">
-  <div class="list-group">
-     <a class="list-group-item" href="#"><span class="badge">New</span>monitored site 1 </a>
-     <a class="list-group-item" href="#">monitored site 2</a>
-   <a class='list-group-item' href='#'>monitored site 2</a><a class='list-group-item' href='#'>monitored site 2</a><a class='list-group-item' href='#'>monitored site 2</a><a class='list-group-item' href='#'>monitored site 2</a><a class='list-group-item' href='#'>monitored site 2</a><a class='list-group-item' href='#'>monitored site 2</a><a class='list-group-item' href='#'>monitored site 2</a><a class='list-group-item' href='#'>monitored site 2</a>
- </div></div>
-  </div>
-</div>
- <script src="js/myQueryScripts.js"></script> 
+
+<div class="container" style="text-align:center"><img src="img/ipm_logo2.jpg" width="320" height="287" alt=""/></div>
 </body>
 </html>
