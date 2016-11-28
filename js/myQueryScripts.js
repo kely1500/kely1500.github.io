@@ -36,8 +36,8 @@
 	
 	$("#active").on("click",".sitesList>>>a", function(){
 		var badge=$(this).find(".badge");
-		if( badge.css("display")!="none"){
-			badge.fadeOut();
+		if( badge.css("opacity")!="0"){
+			badge.css("opacity", "0");
 			var old=$(this).closest(".sitesList").find(".oldmonit");
 			var site=$(this).remove();
 			old.prepend(site);
