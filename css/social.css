@@ -98,7 +98,9 @@ b{
 	float: left;
 	position: relative;
 }
-
+.loginok{
+	margin-left:40pt;
+	}
 .postsPlace .postedImg{
 
 width: 80%;
