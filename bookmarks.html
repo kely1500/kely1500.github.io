@@ -7,10 +7,10 @@
   <!--link rel="stylesheet" href="css/content/newTab.css">
   <link rel="stylesheet" href="css/content/newTab.css">
   <link rel="stylesheet" href="css/skin/newTab.css"-->
-  
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   <script src="js/bookmarksscripts.js"></script> 
+   <script src="js/bookmarksscripts.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!--link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"-->
@@ -42,7 +42,7 @@
     list-style-type: none;
     font-size: 9pt;
     z-index: 1;
-  
+
   }
   ul#navmenu li{
     width: 125px;
@@ -138,7 +138,7 @@
   h2{
     margin-left: 5px;
   }
-  div#thumbnails{
+  div#All_t{
    /* width: 80%;*/
     float: left;
     margin-left: 7%;
@@ -204,24 +204,27 @@
   span#addNCat{
     margin-left: 420px;
   }
-  div#thumbnails2, #thumbnails3,#thumbnails4,#thumbnails5, #thumbnails6, #thumbnails7,#thumbnails8,#thumbnails9,#thumbnails10,#thumbnails11,#thumbnails12,#thumbnails13,#thumbnails14{
+  div.thumbNotShowing{
     display: none;
-   
+    float: left;
+    margin-left: 7%;
+    background-color: #fbf7f7;
+    min-height:300pt;
   }
-    .sub1, .sub2 div#c{
+
+  .sub1, .sub2 {
     margin-left: -29pt;
   }
   div#c, #modalParaCategorias, #novasCategorias{
     margin-left: -29pt;
   }
-
   .thumb{
-	  
     float: left;
     margin-left: 7%;
     background-color: #fbf7f7;
     min-height:300pt;
 	  }
+
   span#pencil{
      width:25px;
      height:25px;
@@ -237,7 +240,7 @@
      padding: 5px;
      border: 1pt solid #000000;
    }
-  
+
   span#tirar{
      width:25px;
      height:25px;
@@ -252,10 +255,10 @@
      text-align: center;
      padding: 5px;
      border: 1pt solid #000000;
-  
+
   }
   div#imagem{
-   
+
     text-align:center;
     float:left;
     padding-top:10px;
@@ -265,11 +268,10 @@
   button#close_new_website{
     margin-top: -20pt;
   }
-
   </style>
   </head>
   <body style="padding-top: 70px;">
-  
+
   <nav class="navbar navbar-cute navbar-fixed-top">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -303,10 +305,10 @@
     </div>
     <!-- /.container-fluid -->
   </nav>
-  
+
     <div class="container"><div class="modal fade" id="confirmDeleteSite" role="dialog" style="display: none;"><div class="modal-dialog cuteModal"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">×</button></div><div class="modal-body"><p>Are you sure you want to delete from your bookmarks?</p></div><div class="modal-footer"><button type="button" id="confirm" class="btn cutebutton" data-dismiss="modal">Ok</button><button type="button" id="confdelete" class="btn cutebutton" data-dismiss="modal">Cancel</button></div></div></div></div></div>
-  
-  
+
+
   <form id = "but" >
       <button type="button" class="btn cutebutton" data-toggle="modal" data-target="#myModal" id="add_web"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add new website</button>
   </form>
@@ -324,7 +326,7 @@
     </ul>
   </li>
   <li id = "Sinfonia"><a >Sinfonia</a></li>
-  <li id = "Musica"><a >Música</a><span class="rarrow">&#9654;</span>
+  <li id = "Musica"><a >Musica</a><span class="rarrow">&#9654;</span>
     <ul class = "sub1">
       <li id = "MetalCore"><a >MetalCore</a></li>
       <li id = "Country"><a >Country</a></li>
@@ -343,8 +345,8 @@
   <button type="button" class="btn btn-primary babiButton" data-toggle="modal" data-target="#modalForNewCategories" >Edit Categories </button>
   </div>
   </div>
-  
-  <div id = "thumbnails" class = "thumb col-sm-9 panel panel-default">
+
+  <div id = "All_t" class = "thumbNotShowing col-sm-9 panel panel-default" style="display: block">
   <header id = "headerCategories">
   <h3>All</h3>
   </header>
@@ -364,7 +366,7 @@
   <span id = "pencil" class="glyphicon glyphicon-pencil"></span>
   <span id = "tirar" class="bookm-remove glyphicon glyphicon-remove"></span>
   </div>
-  
+
   <div id = "imagem">
   <p><a href="http://www.youtube.com"target="_blank"><img  src="img/image_not_found.jpg" height="120" width="160" class= "imag1"/><br>Youtube</a></p>
   <span id = "pencil" class="glyphicon glyphicon-pencil"></span>
@@ -381,10 +383,9 @@
   <span id = "tirar" class="bookm-remove glyphicon glyphicon-remove"></span>
   </div>
   </div>
-  <br>
-
   </div>
-  <div id = "thumbnails2" class = "thumb col-sm-9 panel panel-default">
+
+  <div id = "Series_t" class = "thumbNotShowing col-sm-9 panel panel-default">
   <header id = "headerCategories">
   <h3>Series</h3>
   </header>
@@ -402,13 +403,13 @@
   <span id = "tirar" class="bookm-remove glyphicon glyphicon-remove"></span>
   </div>
   <div id = "imagem">
-
   <p><a href="http://www.watch-episodes.co/lucifer"target="_blank"><img  src="img/image_not_found.jpg" height="120" width="160" class= "imag1"/><br>Lucifer</a></p><span id = "pencil" class="glyphicon glyphicon-pencil"></span>
   <span id = "tirar" class="bookm-remove glyphicon glyphicon-remove"></span>
   </div>
   </div>
   </div>
-  <div id = "thumbnails3" class = "thumb col-sm-9 panel panel-default">
+
+  <div id = "GOT_t" class = "thumbNotShowing col-sm-9 panel panel-default">
   <header id = "headerCategories">
   <h3>GOT</h3>
   </header>
@@ -418,9 +419,33 @@
   <span id = "tirar" class="bookm-remove glyphicon glyphicon-remove"></span>
   </div>
   </div>
-  
   </div>
-  <div id = "thumbnails6" class = "thumb col-sm-9 panel panel-default">
+
+  <div id = "Flash_t" class = "thumbNotShowing col-sm-9 panel panel-default">
+  <header id = "headerCategories">
+  <h3>Flash</h3>
+  </header>
+  <div class="images">
+  <div id = "imagem">
+    <p><a href="http://www.watch-episodes.co/the-flash"target="_blank"><img  src="img/image_not_found.jpg" height="120" width="160" class= "imag1"/><br>Flash</a></p><span id = "pencil" class="glyphicon glyphicon-pencil"></span>
+  <span id = "tirar" class="bookm-remove glyphicon glyphicon-remove"></span>
+  </div>
+  </div>
+  </div>
+
+  <div id = "Arrow_t" class = "thumbNotShowing col-sm-9 panel panel-default">
+  <header id = "headerCategories">
+  <h3>Arrow</h3>
+  </header>
+  <div class="images">
+  <div id = "imagem">
+    <p><a href="http://www.watch-episodes.co/arrow"target="_blank"><img  src="img/image_not_found.jpg" height="120" width="160" class= "imag1"/><br>Arrow</a></p><span id = "pencil" class="glyphicon glyphicon-pencil"></span>
+  <span id = "tirar" class="bookm-remove glyphicon glyphicon-remove"></span>
+  </div>
+  </div>
+  </div>
+
+  <div id = "Sinfonia_t" class = "thumbNotShowing col-sm-9 panel panel-default">
   <header id = "headerCategories">
   <h3>Sinfonia</h3>
   </header>
@@ -430,9 +455,10 @@
   </div>
   </div>
   </div>
-  <div id = "thumbnails7" class = "thumb col-sm-9 panel panel-default">
+
+  <div id = "Musica_t" class = "thumbNotShowing col-sm-9 panel panel-default">
   <header id = "headerCategories">
-  <h3>Música</h3>
+  <h3>Musica</h3>
   </header>
   <div class="images"> <div id = "imagem">
     <p><a href="https://pt.wikipedia.org/wiki/M%C3%BAsica" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>Musica</a></p><span id = "pencil" class="glyphicon glyphicon-pencil"></span>
@@ -440,31 +466,94 @@
   </div>
   </div>
   </div>
-  <div id = "thumbnails14" class = "thumb col-sm-9 panel panel-default">
+
+  <div id = "MetalCore_t" class = "thumbNotShowing col-sm-9 panel panel-default">
   <header id = "headerCategories">
-  <h3>Jardinagem</h3>
+  <h3>MetalCore</h3>
   </header>
-  <div class="images"><div id = "imagem">
-    <p><a href="http://www.gardendesign.com/" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>Garden Design</a></p><span id = "pencil" class="glyphicon glyphicon-pencil"></span>
+  <div class="images"> <div id = "imagem">
+    <p><a href="https://pt.wikipedia.org/wiki/Metalcore" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>MetalCore</a></p><span id = "pencil" class="glyphicon glyphicon-pencil"></span>
   <span id = "tirar" class="bookm-remove glyphicon glyphicon-remove"></span>
   </div>
   </div>
-  <br>
-  <div class="images">
+  </div>
+
+  <div id = "Country_t" class = "thumbNotShowing col-sm-9 panel panel-default">
+  <header id = "headerCategories">
+  <h3>Country</h3>
+  </header>
+  <div class="images"> <div id = "imagem">
+    <p><a href="https://pt.wikipedia.org/wiki/M%C3%BAsica_country" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>Country</a></p><span id = "pencil" class="glyphicon glyphicon-pencil"></span>
+  <span id = "tirar" class="bookm-remove glyphicon glyphicon-remove"></span>
   </div>
   </div>
-  
   </div>
+
+  <div id = "Pop_t" class = "thumbNotShowing col-sm-9 panel panel-default">
+  <header id = "headerCategories">
+  <h3>Pop</h3>
+  </header>
+  <div class="images"> <div id = "imagem">
+    <p><a href="https://pt.wikipedia.org/wiki/M%C3%BAsica_pop" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>Pop</a></p><span id = "pencil" class="glyphicon glyphicon-pencil"></span>
+  <span id = "tirar" class="bookm-remove glyphicon glyphicon-remove"></span>
+  </div>
+  </div>
+  </div>
+
+  <div id = "K-Pop_t" class = "thumbNotShowing col-sm-9 panel panel-default">
+  <header id = "headerCategories">
+  <h3>K-Pop</h3>
+  </header>
+  <div class="images"> <div id = "imagem">
+    <p><a href="https://pt.wikipedia.org/wiki/K-pop" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>K-Pop</a></p><span id = "pencil" class="glyphicon glyphicon-pencil"></span>
+  <span id = "tirar" class="bookm-remove glyphicon glyphicon-remove"></span>
+  </div>
+  </div>
+  </div>
+
+  <div id = "R-Pop_t" class = "thumbNotShowing col-sm-9 panel panel-default">
+  <header id = "headerCategories">
+  <h3>R-Pop</h3>
+  </header>
+  <div class="images"> <div id = "imagem">
+    <p><a href="https://en.wikipedia.org/wiki/Russian_pop" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>R-Pop</a></p><span id = "pencil" class="glyphicon glyphicon-pencil"></span>
+  <span id = "tirar" class="bookm-remove glyphicon glyphicon-remove"></span>
+  </div>
+  </div>
+  </div>
+
+  <div id = "J-Pop_t" class = "thumbNotShowing col-sm-9 panel panel-default">
+  <header id = "headerCategories">
+  <h3>J-Pop</h3>
+  </header>
+  <div class="images"> <div id = "imagem">
+    <p><a href="https://pt.wikipedia.org/wiki/J-pop" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>J-Pop</a></p><span id = "pencil" class="glyphicon glyphicon-pencil"></span>
+  <span id = "tirar" class="bookm-remove glyphicon glyphicon-remove"></span>
+  </div>
+  </div>
+  </div>
+
+  <div id = "Jardinagem_t" class = "thumbNotShowing col-sm-9 panel panel-default">
+  <header id = "headerCategories">
+  <h3>Jardinagem</h3>
+  </header>
+  <div class="images"> <div id = "imagem">
+    <p><a href="http://www.gardendesign.com/" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>Jardinagem</a></p><span id = "pencil" class="glyphicon glyphicon-pencil"></span>
+  <span id = "tirar" class="bookm-remove glyphicon glyphicon-remove"></span>
+  </div>
+  </div>
+  </div>
+  </div>
+
   <div class="modal fade" id="myModal" role="dialog">
    <div class="modal-dialog">
      <div class="modal-content">
       <div class="modal-header">
       <h4 class="modal-title">New Website</h4>
-      
-                            <button type="button" id = "close_new_website" class="close" data-dismiss="modal">&times;</button>
 
+              <button type="button" id = "close_new_website" class="close" data-dismiss="modal">&times;</button>
             </div>        <div class="modal-body">
-       
+
        <form id = "newWebsiteForm">
          <div class="form-group">
            <label for="name">Website name:</label>
@@ -490,8 +579,8 @@
            </div>
          </div>
        </div><div class="modal-footer">
-      
-         <button type="submit" id = "okBtn" class="btn btn-primary" >Add</button>
+
+         <button type="submit" id = "okBtn" class="btn btn-primary" disabled="true" >Add</button>
          <button type="button" id = "cancelbtn" class="btn btn-primary" data-dismiss="modal">Cancel</button>
     </div></form>
      </div>
@@ -500,35 +589,12 @@
   <div class="modal fade" id="myModalCategory" role="dialog">
   <div class="modal-dialog">
   <!-- <div class="modal-dialog">-->
-        <div class="modal-content" id = "categories" data-dismiss = "modal">
-
+     <div class="modal-content" id = "categories" data-dismiss = "modal">
        <div id = cate>
          <span class="glyphicon glyphicon-remove" data-dismiss="modal" style="float:right"></span></p>
        <ul id = "navmenu">
-         <div id = "modalParaCategorias" class = "oi">
-         <li><a >Séries</a></li>
-         <li><a >Dramas</a><span class="rarrow">&#9654;</span>
-           <ul class = "sub1">
-             <li><a >Descendants of the Sun</a></li>
-             <li><a >Dream Knight</a></li>
-             <li><a >Shopping King Louie</a></li>
-           </ul>
-         </li>
-         <li><a >Sinfonia</a></li>
-         <li><a >Música</a><span class="rarrow">&#9654;</span>
-           <ul class = "sub1">
-             <li><a >MetalCore</a></li>
-             <li><a >Country</a></li>
-             <li><a >Pop</a><span class="rarrow">&#9654;</span>
-               <ul class = "sub2">
-                 <li><a >K-pop</a></li>
-                 <li><a >R-pop</a></li>
-                 <li><a >J-pop</a></li>
-               </ul>
-             </li>
-           </ul>
-         </li>
-         <li><a >Jardinagem</a></li>
+         <div id = "modalParaCategorias" class = "oi" >
+
        </div>
        </ul>
      </div>
@@ -536,120 +602,7 @@
    </div>
      </div>
   <!--   </div>-->
-  
- 
-  <div id = "thumbnails4" class = "panel panel-default">
-  <header id = "headerCategories">
-  <h3>Flash</h3>
-  </header>
-  <div class="images">
-    <p><a href="http://www.watch-episodes.co/the-flash" target="_blank"><img  draggable="true" src="img/image_not_found.jpg" height="120" width="160" class= "imag1"/><br>Flash</a></p>
-  </div>
-  <br>
-  <div class="images">
-  </div>
-  </div>
-  
-  <div id = "thumbnails5" class = "panel panel-default">
-  <header id = "headerCategories">
-  <h3>Arrow</h3>
-  </header>
-  <div class="images">
-    <p><a href="http://www.watch-episodes.co/arrow" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>Arrow</a></p>
-  </div>
-  <br>
-  <div class="images">
-  </div>
-  </div>
-  
-  <div id = "thumbnails7" class = "panel panel-default">
-  <header id = "headerCategories">
-  <h3>Música</h3>
-  </header>
-  <div class="images">
-    <p><a href="https://pt.wikipedia.org/wiki/M%C3%BAsica" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>Musica</a></p>
-  </div>
-  <br>
-  <div class="images">
-  </div>
-  </div>
-  <div id = "thumbnails8" class = "panel panel-default">
-  <header id = "headerCategories">
-  <h3>MetalCore</h3>
-  </header>
-  <div class="images">
-    <p><a href="https://pt.wikipedia.org/wiki/Metalcore" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>Metal Core</a></p>
-  </div>
-  <br>
-  <div class="images">
-  </div>
-  </div>
-  <div id = "thumbnails9" class = "panel panel-default">
-  <header id = "headerCategories">
-  <h3>Country</h3>
-  </header>
-  <div class="images">
-    <p><a href="https://pt.wikipedia.org/wiki/M%C3%BAsica_country" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>Country</a></p>
-  </div>
-  <br>
-  <div class="images">
-  </div>
-  </div>
-  <div id = "thumbnails10" class = "panel panel-default">
-  <header id = "headerCategories">
-  <h3>Pop</h3>
-  </header>
-  <div class="images">
-    <p><a href="https://pt.wikipedia.org/wiki/M%C3%BAsica_pop" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>Pop</a></p>
-  </div>
-  <br>
-  <div class="images">
-  </div>
-  </div>
-  <div id = "thumbnails11" class = "panel panel-default">
-  <header id = "headerCategories">
-  <h3>K-Pop</h3>
-  </header>
-  <div class="images">
-    <p><a href="https://pt.wikipedia.org/wiki/K-pop" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>K-pop</a></p>
-  </div>
-  <br>
-  <div class="images">
-  </div>
-  </div>
-  <div id = "thumbnails12" class = "panel panel-default">
-  <header id = "headerCategories">
-  <h3>R-Pop</h3>
-  </header>
-  <div class="images">
-    <p><a href="https://en.wikipedia.org/wiki/Russian_pop" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>R-pop</a></p>
-  </div>
-  <br>
-  <div class="images">
-  </div>
-  </div>
-  <div id = "thumbnails13" class = "panel panel-default">
-  <header id = "headerCategories">
-  <h3>J-Pop</h3>
-  </header>
-  <div class="images">
-    <p><a href="https://pt.wikipedia.org/wiki/J-pop" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>J_pop</a></p>
-  </div>
-  <br>
-  <div class="images">
-  </div>
-  </div>
-  <div id = "thumbnails14" class = "panel panel-default">
-  <header id = "headerCategories">
-  <h3>Jardinagem</h3>
-  </header>
-  <div class="images">
-    <p><a href="http://www.gardendesign.com/" target="_blank"><img src="img/image_not_found.jpg" height="120" width="160"  class= "imag1"/><br>Garden Design</a></p>
-  </div>
-  <br>
-  <div class="images">
-  </div>
-  </div>
+
   <div class="modal fade" id="modalForNewCategories" role="dialog">
   <div class="modal-dialog">
   <!-- <div class="modal-dialog">-->
@@ -662,40 +615,16 @@
             <div class="modal-body">
       <ul id = "navmenu">
         <div id = "c" class = "oi">
-        <li><a >Séries</a><span class="remove">&#10006;</span></li>
-        <li><a >Dramas</a><span class="rarrow">&#9654;</span><span class="remove">&#10006;</span>
-          <ul class = "sub1">
-            <li><a >Descendants of the Sun</a><span class="remove">&#10006;</span></li>
-            <li><a >Dream Knight</a><span class="remove">&#10006;</span></li>
-            <li id = list><a >Shopping King Louie</a><span class="remove">&#10006;</span></li>
-          </ul>
-        </li>
-        <li><a >Sinfonia</a><span class="remove">&#10006;</span></li>
-        <li><a >Música</a><span class="rarrow">&#9654;</span><span class="remove">&#10006;</span>
-          <ul class = "sub1">
-            <li><a >MetalCore</a><span class="remove">&#10006;</span></li>
-            <li><a >Country</a><span class="remove">&#10006;</span></li>
-            <li><a >Pop</a><span class="rarrow">&#9654;</span><span class="remove">&#10006;</span>
-              <ul class = "sub2">
-                <li><a >K-pop</a><span class="remove">&#10006;</span></li>
-                <li><a >R-pop</a><span class="remove">&#10006;</span></li>
-                <li><a >J-pop</a><span class="remove">&#10006;</span></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li id = "1"><a >Jardinagem</a><span class="remove">&#10006;</span></li>
-        <li><a >Jardinagem</a><span class="remove">&#10006;</span></li>
-      </div>
+        </div>
       </ul> <div id = "newCategorybutton" >
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newCategory">New Category</button>
       </div></div>
       <div class="modal-footer">
       <button type="button" id = "applycats" class="btn btn-primary" data-dismiss="modal">Apply</button>
          <button type="button" id = "cancelcats" class="btn btn-primary" data-dismiss="modal">Cancel</button>
-   
+
       </div>
-     
+
     </div>
     </div>
   <!--   </div>-->
@@ -712,7 +641,7 @@
             <span id = "addNCat" class="glyphicon glyphicon-remove" data-dismiss="modal"></span></p>
           </div>
           <input type="name" class="form-control" id="categoryname">
-      
+
           <div id = "addNewCategoryButton" >
             <button type="button" class="btn btn-primary">Add</button>
           </div>  </div>
@@ -724,7 +653,7 @@
   </div>
   </div>
   <script>
-  
+
   $("#addNewCategoryButton").click(function () {
     var selectedVal = $('#categoryname').val();
 	if(selectedVal!=''){
@@ -733,254 +662,186 @@
     /*$('div#navmenu_principal').append('<li id ="' +selectedVal+ '"><a >'+selectedVal+'</a></li>');
     $('div#modalParaCategorias').append('<li id ="' +selectedVal+ '"><a >'+selectedVal+'</a></li>');*/
   });
-  
+
   $("div#novasCategorias").on('click', 'li',function (event) {
-	 
+
     $(this).closest('li').remove();
   });
-  
+
   $("div#c").on('click', 'span',function (event) {
     $(this).closest('li').remove();
     $("div.oi").closest('li').remove();
-  
+
   });
-  
+
   $("#navmenu_principal").on('click', '#All', function(){
-    $("#thumbnails14").hide();
-    $("#thumbnails13").hide();
-    $("#thumbnails12").hide();
-    $("#thumbnails11").hide();
-    $("#thumbnails10").hide();
-    $("#thumbnails9").hide();
-    $("#thumbnails8").hide();
-    $("#thumbnails7").hide();
-    $("#thumbnails6").hide();
-    $("#thumbnails5").hide();
-    $("#thumbnails4").hide();
-    $("#thumbnails3").hide();
-    $("#thumbnails2").hide();
-    $("#thumbnails").show();
+    $("#Jardinagem_t").hide();
+    $("#J-Pop_t").hide();
+    $("#R-Pop_t").hide();
+    $("#K-Pop_t").hide();
+    $("#Pop_t").hide();
+    $("#Country_t").hide();
+    $("#MetalCore_t").hide();
+    $("#Musica_t").hide();
+    $("#Sinfonia_t").hide();
+    $("#Arrow_t").hide();
+    $("#Flash_t").hide();
+    $("#GOT_t").hide();
+    $("#Series_t").hide();
+    $("#All_t").show();
   });
-  
+
   $("#navmenu_principal").on('click', '#Series', function(){
-    $("#thumbnails14").hide();
-    $("#thumbnails13").hide();
-    $("#thumbnails12").hide();
-    $("#thumbnails11").hide();
-    $("#thumbnails10").hide();
-    $("#thumbnails9").hide();
-    $("#thumbnails8").hide();
-    $("#thumbnails7").hide();
-    $("#thumbnails6").hide();
-    $("#thumbnails5").hide();
-    $("#thumbnails4").hide();
-    $("#thumbnails3").hide();
-    $("#thumbnails2").show();
-    $("#thumbnails").hide();
+    $("#Jardinagem_t").hide();
+    $("#J-Pop_t").hide();
+    $("#R-Pop_t").hide();
+    $("#K-Pop_t").hide();
+    $("#Pop_t").hide();
+    $("#Country_t").hide();
+    $("#MetalCore_t").hide();
+    $("#Musica_t").hide();
+    $("#Sinfonia_t").hide();
+    $("#Arrow_t").hide();
+    $("#Flash_t").hide();
+    $("#GOT_t").hide();
+    $("#Series_t").show();
+    $("#All_t").hide();
+
   });
-  
+
   $("#navmenu_principal").on('click', '#GOT', function(){
-    $("#thumbnails14").hide();
-    $("#thumbnails13").hide();
-    $("#thumbnails12").hide();
-    $("#thumbnails11").hide();
-    $("#thumbnails10").hide();
-    $("#thumbnails9").hide();
-    $("#thumbnails8").hide();
-    $("#thumbnails7").hide();
-    $("#thumbnails6").hide();
-    $("#thumbnails5").hide();
-    $("#thumbnails4").hide();
-    $("#thumbnails3").show();
-    $("#thumbnails2").hide();
-    $("#thumbnails").hide();
+    $("#GOT_t").show();
+    $("#Series_t").show();
+
   });
-  
+
   $("#navmenu_principal").on('click', '#Flash', function(){
-    $("#thumbnails14").hide();
-    $("#thumbnails13").hide();
-    $("#thumbnails12").hide();
-    $("#thumbnails11").hide();
-    $("#thumbnails10").hide();
-    $("#thumbnails9").hide();
-    $("#thumbnails8").hide();
-    $("#thumbnails7").hide();
-    $("#thumbnails6").hide();
-    $("#thumbnails5").hide();
-    $("#thumbnails4").show();
-    $("#thumbnails3").hide();
-    $("#thumbnails2").hide();
-    $("#thumbnails").hide();
+    $("#Arrow_t").hide();
+    $("#Flash_t").show();
+    $("#GOT_t").hide();
+    $("#Series_t").show();
+    $("#All_t").hide();
+
   });
-  
+
   $("#navmenu_principal").on('click', '#Arrow', function(){
-    $("#thumbnails14").hide();
-    $("#thumbnails13").hide();
-    $("#thumbnails12").hide();
-    $("#thumbnails11").hide();
-    $("#thumbnails10").hide();
-    $("#thumbnails9").hide();
-    $("#thumbnails8").hide();
-    $("#thumbnails7").hide();
-    $("#thumbnails6").hide();
-    $("#thumbnails5").show();
-    $("#thumbnails4").hide();
-    $("#thumbnails3").hide();
-    $("#thumbnails2").hide();
-    $("#thumbnails").hide();
+    $("#Arrow_t").show();
+    $("#Flash_t").hide();
+    $("#GOT_t").hide();
+    $("#Series_t").show();
+    $("#All_t").hide();
+
   });
-  
+
   $("#navmenu_principal").on('click', '#Sinfonia', function(){
-    $("#thumbnails14").hide();
-    $("#thumbnails13").hide();
-    $("#thumbnails12").hide();
-    $("#thumbnails11").hide();
-    $("#thumbnails10").hide();
-    $("#thumbnails9").hide();
-    $("#thumbnails8").hide();
-    $("#thumbnails7").hide();
-    $("#thumbnails6").show();
-    $("#thumbnails5").hide();
-    $("#thumbnails4").hide();
-    $("#thumbnails3").hide();
-    $("#thumbnails2").hide();
-    $("#thumbnails").hide();
+    $("#Jardinagem_t").hide();
+    $("#J-Pop_t").hide();
+    $("#R-Pop_t").hide();
+    $("#K-Pop_t").hide();
+    $("#Pop_t").hide();
+    $("#Country_t").hide();
+    $("#MetalCore_t").hide();
+    $("#Musica_t").hide();
+    $("#Sinfonia_t").show();
+    $("#Arrow_t").hide();
+    $("#Flash_t").hide();
+    $("#GOT_t").hide();
+    $("#Series_t").hide();
+    $("#All_t").hide();
   });
-  
+
   $("#navmenu_principal").on('click', '#Musica', function(){
-      $("#thumbnails14").hide();
-      $("#thumbnails13").hide();
-      $("#thumbnails12").hide();
-      $("#thumbnails11").hide();
-      $("#thumbnails10").hide();
-      $("#thumbnails9").hide();
-      $("#thumbnails8").hide();
-      $("#thumbnails7").show();
-      $("#thumbnails6").hide();
-      $("#thumbnails5").hide();
-      $("#thumbnails4").hide();
-      $("#thumbnails3").hide();
-      $("#thumbnails2").hide();
-      $("#thumbnails").hide();
+    $("#Jardinagem_t").hide();
+    $("#J-Pop_t").hide();
+    $("#R-Pop_t").hide();
+    $("#K-Pop_t").hide();
+    $("#Pop_t").hide();
+    $("#Country_t").hide();
+    $("#MetalCore_t").hide();
+    $("#Musica_t").show();
+    $("#Sinfonia_t").hide();
+    $("#Arrow_t").hide();
+    $("#Flash_t").hide();
+    $("#GOT_t").hide();
+    $("#Series_t").hide();
+    $("#All_t").hide();
+
   });
   $("#navmenu_principal").on('click', '#MetalCore', function(){
-      $("#thumbnails14").hide();
-      $("#thumbnails13").hide();
-      $("#thumbnails12").hide();
-      $("#thumbnails11").hide();
-      $("#thumbnails10").hide();
-      $("#thumbnails9").hide();
-      $("#thumbnails8").show();
-      $("#thumbnails7").hide();
-      $("#thumbnails6").hide();
-      $("#thumbnails5").hide();
-      $("#thumbnails4").hide();
-      $("#thumbnails3").hide();
-      $("#thumbnails2").hide();
-      $("#thumbnails").hide();
+    $("#Pop_t").hide();
+    $("#Country_t").hide();
+    $("#MetalCore_t").show();
+    $("#Musica_t").show();
+    $("#All_t").hide();
+
   });
   $("#navmenu_principal").on('click', '#Country', function(){
-    $("#thumbnails14").hide();
-    $("#thumbnails13").hide();
-    $("#thumbnails12").hide();
-    $("#thumbnails10").hide();
-    $("#thumbnails9").show();
-    $("#thumbnails8").hide();
-    $("#thumbnails7").hide();
-    $("#thumbnails6").hide();
-    $("#thumbnails5").hide();
-    $("#thumbnails4").hide();
-    $("#thumbnails3").hide();
-    $("#thumbnails2").hide();
-    $("#thumbnails").hide();
+    $("#Pop_t").hide();
+    $("#Country_t").show();
+    $("#MetalCore_t").hide();
+    $("#Musica_t").show();
+    $("#All_t").hide();
   });
   $("#navmenu_principal").on('click', '#Pop', function(){
-    $("#thumbnails14").hide();
-    $("#thumbnails13").hide();
-    $("#thumbnails12").hide();
-    $("#thumbnails11").hide();
-    $("#thumbnails10").show();
-    $("#thumbnails9").hide();
-    $("#thumbnails8").hide();
-    $("#thumbnails7").hide();
-    $("#thumbnails6").hide();
-    $("#thumbnails5").hide();
-    $("#thumbnails4").hide();
-    $("#thumbnails3").hide();
-    $("#thumbnails2").hide();
-    $("#thumbnails").hide();
+    $("#Pop_t").show();
+    $("#Country_t").hide();
+    $("#MetalCore_t").hide();
+    $("#Musica_t").show();
+    $("#All_t").hide();
   });
   $("#navmenu_principal").on('click', '#K-pop', function(){
-    $("#thumbnails14").hide();
-    $("#thumbnails13").hide();
-    $("#thumbnails12").hide();
-    $("#thumbnails11").show();
-    $("#thumbnails10").hide();
-    $("#thumbnails9").hide();
-    $("#thumbnails8").hide();
-    $("#thumbnails7").hide();
-    $("#thumbnails6").hide();
-    $("#thumbnails5").hide();
-    $("#thumbnails4").hide();
-    $("#thumbnails3").hide();
-    $("#thumbnails2").hide();
-    $("#thumbnails").hide();
+    $("#J-Pop_t").hide();
+    $("#R-Pop_t").hide();
+    $("#K-Pop_t").show();
+    $("#Pop_t").show();
+    $("#Country_t").hide();
+    $("#MetalCore_t").hide();
+    $("#Musica_t").show();
+    $("#All_t").hide();
   });
   $("#navmenu_principal").on('click', '#R-pop', function(){
-    $("#thumbnails14").hide();
-    $("#thumbnails13").hide();
-    $("#thumbnails12").show();
-    $("#thumbnails11").hide();
-    $("#thumbnails10").hide();
-    $("#thumbnails9").hide();
-    $("#thumbnails8").hide();
-    $("#thumbnails7").hide();
-    $("#thumbnails6").hide();
-    $("#thumbnails5").hide();
-    $("#thumbnails4").hide();
-    $("#thumbnails3").hide();
-    $("#thumbnails2").hide();
-    $("#thumbnails").hide();
+    $("#J-Pop_t").hide();
+    $("#R-Pop_t").show();
+    $("#K-Pop_t").hide();
+    $("#Pop_t").show();
+    $("#Country_t").hide();
+    $("#MetalCore_t").hide();
+    $("#Musica_t").show();
+    $("#All_t").hide();
   });
+
   $("#navmenu_principal").on('click', "#J-pop", function(){
-    $("#thumbnails14").hide();
-    $("#thumbnails13").show();
-    $("#thumbnails12").hide();
-    $("#thumbnails11").hide();
-    $("#thumbnails10").hide();
-    $("#thumbnails9").hide();
-    $("#thumbnails8").hide();
-    $("#thumbnails7").hide();
-    $("#thumbnails6").hide();
-    $("#thumbnails5").hide();
-    $("#thumbnails4").hide();
-    $("#thumbnails3").hide();
-    $("#thumbnails2").hide();
-    $("#thumbnails").hide();
+    $("#J-Pop_t").show();
+    $("#R-Pop_t").hide();
+    $("#K-Pop_t").hide();
+    $("#Pop_t").show();
+    $("#Country_t").hide();
+    $("#MetalCore_t").hide();
+    $("#Musica_t").show();
+    $("#All_t").hide();
   });
+
   $("#navmenu_principal").on('click', '#Jardinagem', function(){
-    $("#thumbnails14").show();
-    $("#thumbnails13").hide();
-    $("#thumbnails12").hide();
-    $("#thumbnails11").hide();
-    $("#thumbnails10").hide();
-    $("#thumbnails9").hide();
-    $("#thumbnails8").hide();
-    $("#thumbnails7").hide();
-    $("#thumbnails6").hide();
-    $("#thumbnails5").hide();
-    $("#thumbnails4").hide();
-    $("#thumbnails3").hide();
-    $("#thumbnails2").hide();
-    $("#thumbnails").hide();
-  });
+    $("#Jardinagem_t").show();
+    $("#J-Pop_t").hide();
+    $("#R-Pop_t").hide();
+    $("#K-Pop_t").hide();
+    $("#Pop_t").hide();
+    $("#Country_t").hide();
+    $("#MetalCore_t").hide();
+    $("#Musica_t").hide();
+    $("#Sinfonia_t").hide();
+    $("#Arrow_t").hide();
+    $("#Flash_t").hide();
+    $("#GOT_t").hide();
+    $("#Series_t").hide();
+    $("#All_t").hide();
+});
   $('div#modalParaCategorias').on('click', 'a', function(event){
       var text = $(event.target).text();
       $('div#novasCategorias').append('<li id ="' +text+ '"><a >'+text+'</a><span class="remove">&#10006;</span></li>');
   });
-  
 
-  
   </script>
   </body>
   </html>
