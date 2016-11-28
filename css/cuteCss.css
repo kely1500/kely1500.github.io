@@ -239,3 +239,9 @@
 							margin-right: -60%;
 							 
 						 }
+						 .sitesList .list-group-item{
+							 padding-left: 40pt;
+							 }
+							.oldmonit .badge{
+								opacity:0;
+								}
