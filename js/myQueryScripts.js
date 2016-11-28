@@ -252,7 +252,9 @@
 			}
 		});
 		
-		
+		$('#myModal').on('shown.bs.modal', function () {
+    		$("#group_name").focus();
+}) ;
 		
 });
 	

@@ -208,6 +208,13 @@
     display: none;
    
   }
+    .sub1, .sub2 div#c{
+    margin-left: -29pt;
+  }
+  div#c, #modalParaCategorias, #novasCategorias{
+    margin-left: -29pt;
+  }
+
   .thumb{
 	  
     float: left;
@@ -255,6 +262,10 @@
     padding-bottom:10px;
     position:relative;
   }
+  button#close_new_website{
+    margin-top: -20pt;
+  }
+
   </style>
   </head>
   <body style="padding-top: 70px;">
@@ -450,7 +461,8 @@
       <div class="modal-header">
       <h4 class="modal-title">New Website</h4>
       
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <button type="button" id = "close_new_website" class="close" data-dismiss="modal">&times;</button>
+
             </div>        <div class="modal-body">
        
        <form id = "newWebsiteForm">
@@ -488,7 +500,8 @@
   <div class="modal fade" id="myModalCategory" role="dialog">
   <div class="modal-dialog">
   <!-- <div class="modal-dialog">-->
-     <div class="modal-content" id = "categories">
+        <div class="modal-content" id = "categories" data-dismiss = "modal">
+
        <div id = cate>
          <span class="glyphicon glyphicon-remove" data-dismiss="modal" style="float:right"></span></p>
        <ul id = "navmenu">
@@ -732,7 +745,7 @@
   
   });
   
-  $("li#All").click(function(){
+  $("#navmenu_principal").on('click', '#All', function(){
     $("#thumbnails14").hide();
     $("#thumbnails13").hide();
     $("#thumbnails12").hide();
@@ -749,7 +762,7 @@
     $("#thumbnails").show();
   });
   
-  $("li#Series").click(function(){
+  $("#navmenu_principal").on('click', '#Series', function(){
     $("#thumbnails14").hide();
     $("#thumbnails13").hide();
     $("#thumbnails12").hide();
@@ -766,8 +779,8 @@
     $("#thumbnails").hide();
   });
   
-  $("li#GOT").click(function(){
-   /* $("#thumbnails14").hide();
+  $("#navmenu_principal").on('click', '#GOT', function(){
+    $("#thumbnails14").hide();
     $("#thumbnails13").hide();
     $("#thumbnails12").hide();
     $("#thumbnails11").hide();
@@ -777,13 +790,13 @@
     $("#thumbnails7").hide();
     $("#thumbnails6").hide();
     $("#thumbnails5").hide();
-    $("#thumbnails4").hide();*/
+    $("#thumbnails4").hide();
     $("#thumbnails3").show();
     $("#thumbnails2").hide();
     $("#thumbnails").hide();
   });
   
-  $("li#Flash").click(function(){
+  $("#navmenu_principal").on('click', '#Flash', function(){
     $("#thumbnails14").hide();
     $("#thumbnails13").hide();
     $("#thumbnails12").hide();
@@ -800,7 +813,7 @@
     $("#thumbnails").hide();
   });
   
-  $("li#Arrow").click(function(){
+  $("#navmenu_principal").on('click', '#Arrow', function(){
     $("#thumbnails14").hide();
     $("#thumbnails13").hide();
     $("#thumbnails12").hide();
@@ -817,7 +830,7 @@
     $("#thumbnails").hide();
   });
   
-  $("li#Sinfonia").click(function(){
+  $("#navmenu_principal").on('click', '#Sinfonia', function(){
     $("#thumbnails14").hide();
     $("#thumbnails13").hide();
     $("#thumbnails12").hide();
@@ -834,7 +847,7 @@
     $("#thumbnails").hide();
   });
   
-  $("li#Musica").click(function(){
+  $("#navmenu_principal").on('click', '#Musica', function(){
       $("#thumbnails14").hide();
       $("#thumbnails13").hide();
       $("#thumbnails12").hide();
@@ -850,7 +863,7 @@
       $("#thumbnails2").hide();
       $("#thumbnails").hide();
   });
-  $("li#MetalCore").click(function(){
+  $("#navmenu_principal").on('click', '#MetalCore', function(){
       $("#thumbnails14").hide();
       $("#thumbnails13").hide();
       $("#thumbnails12").hide();
@@ -866,7 +879,7 @@
       $("#thumbnails2").hide();
       $("#thumbnails").hide();
   });
-  $("li#Country").click(function(){
+  $("#navmenu_principal").on('click', '#Country', function(){
     $("#thumbnails14").hide();
     $("#thumbnails13").hide();
     $("#thumbnails12").hide();
@@ -881,7 +894,7 @@
     $("#thumbnails2").hide();
     $("#thumbnails").hide();
   });
-  $("li#Pop").click(function(){
+  $("#navmenu_principal").on('click', '#Pop', function(){
     $("#thumbnails14").hide();
     $("#thumbnails13").hide();
     $("#thumbnails12").hide();
@@ -897,7 +910,7 @@
     $("#thumbnails2").hide();
     $("#thumbnails").hide();
   });
-  $("li#K-pop").click(function(){
+  $("#navmenu_principal").on('click', '#K-pop', function(){
     $("#thumbnails14").hide();
     $("#thumbnails13").hide();
     $("#thumbnails12").hide();
@@ -913,7 +926,7 @@
     $("#thumbnails2").hide();
     $("#thumbnails").hide();
   });
-  $("li#R-pop").click(function(){
+  $("#navmenu_principal").on('click', '#R-pop', function(){
     $("#thumbnails14").hide();
     $("#thumbnails13").hide();
     $("#thumbnails12").show();
@@ -929,7 +942,7 @@
     $("#thumbnails2").hide();
     $("#thumbnails").hide();
   });
-  $("li#J-pop").click(function(){
+  $("#navmenu_principal").on('click', "#J-pop", function(){
     $("#thumbnails14").hide();
     $("#thumbnails13").show();
     $("#thumbnails12").hide();
@@ -945,7 +958,7 @@
     $("#thumbnails2").hide();
     $("#thumbnails").hide();
   });
-  $("li#Jardinagem").click(function(){
+  $("#navmenu_principal").on('click', '#Jardinagem', function(){
     $("#thumbnails14").show();
     $("#thumbnails13").hide();
     $("#thumbnails12").hide();

@@ -21,7 +21,7 @@
           }
           else{
             check.hide();
-			otherChecks.prop('checked', false);
+			otherChecks.prop('checked', false).change();
 			otherChecks.prop('disabled', true);
           }
 		 });

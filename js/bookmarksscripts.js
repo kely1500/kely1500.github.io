@@ -43,12 +43,14 @@
 	
 		 $("#c").html(cats);
 		 $("#c").find("li").append('<span class="remove">&#10006;</span>');
+		 $("#c").find("li:first-child").hide();
 		 });
 		 
 	 $("#add_web").click(function(){
 		 var cats=$("#navmenu_principal").html();
 		
 		 $("#modalParaCategorias").html(cats);
+		  $("#modalParaCategorias").find("li:first-child").hide();
 		 });
 		 
 		/*$("#c").on('click', '.remove', function(){
@@ -58,10 +60,19 @@
 			var newcats=$("#c").children();
 			$("#navmenu_principal").html(newcats);
 			$("#navmenu_principal").find(".remove").remove();
+			$("#navmenu_principal").find("li:first-child").show();
 			});
 		$("#categoryname").keyup(function(event){
 			if(event.keyCode == 13){
 				 $("#addNewCategoryButton").click();
 				}
 			});
+			
+			$("#newCategory").on('shown.bs.modal', function () {
+    		$("#categoryname").focus();
+}) ;
+
+$('#myModal').on('shown.bs.modal', function () {
+    		$("#name").focus();
+}) ;
 	 });
