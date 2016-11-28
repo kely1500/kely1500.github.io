@@ -187,7 +187,7 @@
 					  .closeSite{
 						  background: #023167 !important;
 						  opacity: 1 !important;
-						  color: #FFFF !important;
+						  color: rgba(255, 255, 255, 1) !important;
 						  border-radius: 100%;
 						  width:15pt;
 						

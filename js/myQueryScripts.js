@@ -77,8 +77,8 @@
 	var toDelete;
 	$(".monitorGroup-grid").on('click', '#delete-monit', function(){
 		
-		var modal='Are you sure you want to delete the '+$(this).closest(".monitorGroup").find("h1").text()+' monitoring?';
-		$("#confirmDelete").find(".modal-body>p").text(modal);
+		var modal='Are you sure you want to delete the <strong>'+$(this).closest(".monitorGroup").find("h1").text()+'</strong> monitoring?';
+		$("#confirmDelete").find(".modal-body>p").html(modal);
 		
 		$("#confirmDelete").modal('show');
 		toDelete=$(this).closest(".monitorGroup");
@@ -87,6 +87,8 @@
 		$("#confirm").click(function(){
 			toDelete.fadeIn();
 			toDelete.remove();
+			activeEmpty();
+			deactiveEmpty();
 			});
 	
 	$("#deactive").on("click","#stop-monit", activate);
@@ -106,6 +108,8 @@
 			//monigroup.fadeOut();
 			monigroup.remove();
 			$(".normalmonits").append(monigroup);
+			deactiveEmpty();
+			activeNotEmpty();
 			}
 			
 			
@@ -126,14 +130,33 @@
 		//monigroup.fadeOut();
 		monigroup.remove();
 		$("#deactive").prepend(monigroup);
+		activeEmpty();
+		deactiveNotEmpty();
 		/*$("#deactive").first().fadeIn();*/
 		});
+	function activeNotEmpty(){
+		$(".noActive").hide();
+		}
 	
+	function deactiveNotEmpty(){
+		$(".noDeactive").hide();
+		}
+	function activeEmpty(){
+	
+		if($("#active").find(".monitorGroup").length==0){
+				$(".noActive").show();
+			}
+		}
+	function deactiveEmpty(){
+		if($("#deactive").find(".monitorGroup").length==0){
+				$(".noDeactive").show();
+			}
+		}
 	$(".monitorGroup-grid").on("click",".restartmonit", activate);
 	
 	$(".cute-panel").on('click', '#sitebtn', function(){
 		$(".cute-panel").find("tbody").append('<tr class="cute-tr"><td class="sitesMonitorName"><label class="sitesMonitorLabel">Name: </label><input class="monitorName" type="text"></td><td><label class="sitesMonitorLabel" id="urlLabel" >URL: <abbr class="required"> *</abbr></label><input class="sitesMonitorURL" type="url" required="true" title="This field is required!!" oninvalid="this.setCustomValidity("This field is required!!")"></td><td style="width: 23pt;"><button type="button" class="closeSite close" >&times;</button></td></tr>');
-  
+  	
 	});
 	$(".cute-panel").on('click', '.closeSite', function(){
 			$(this).closest("tr").remove();
@@ -199,6 +222,7 @@
 				newmonit+='</div></div></div>';
 				if(ok){
 					$(".normalmonits").append(newmonit);
+					activeNotEmpty();
 					clearNewMonit();
 					$("#myModal").modal('toggle');
 				}

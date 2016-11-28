@@ -98,8 +98,8 @@ border-radius: 100%; "><span class="caret"></span></a>
             <div class="form-group">
             <label id="gname_label" for="group_name">Group name:<abbr class="required"> *</abbr></label><input id="group_name" name="group_name" class="form-control input-text" type="text" value="" required></div>
             <div class="keywords"><input id="checkkeys" type="checkbox"><label for="checkkeys">Filter by keywords</label>
-           <img src="img/Button-Info-icon.png" width="20pt" height="20pt" alt="" style="margin-left:2pt;" data-toggle="tooltip" data-original-title="Show only the changes in the websites that are related to one of the selected keywords. Write diferent keywords separated by ';'." data-placement="right"/><br>
-  <label id="keyLabel" for="keys">Keywords:</label><input id="keys" type="text" class="form-control input-text">
+           <img src="img/Button-Info-icon.png" width="20pt" height="20pt" alt="" style="margin-left:2pt;" data-toggle="tooltip" data-original-title="Shows only the changes that are related to one of the selected keywords. Write diferent keywords separated by ';'." data-placement="right"/><br>
+  <label id="keyLabel" for="keys">Keywords:</label><input id="keys" type="text" class="form-control input-text" disabled="true">
             </div>
    <div class="cute-panel panel ">
         <div class="panel-heading">Sites</div>
@@ -137,6 +137,7 @@ border-radius: 100%; "><span class="caret"></span></a>
   <label for="sc-2-1-1" data-value="Deactivated monitoring">Deactivated monitorings</label>
 </div>
 <div id="active" class="monitorGroup-grid">
+<div class="noActive" hidden><h4 style="margin-top:20pt;">There are no group monitorings currently <strong>active</strong>!</h4></div>
 <div class="newmonits">
   <div class="monitorGroup row container-fluid">
   	<div class="row"><div class="col-sm-1" style="width:40px;"><span role="button" class="monitorBack glyphicon glyphicon-chevron-left" aria-hidden="true" style="display:none"></span></div>
@@ -170,6 +171,8 @@ border-radius: 100%; "><span class="caret"></span></a>
   </div>
 </div>
 <div id="deactive" class="monitorGroup-grid">
+
+<div class="noDeactive" hidden><h4 style="margin-top:20pt;">There are no group monitorings currently <strong>deactive</strong>!</h4></div>
 <div class="monitorGroup row container-fluid" style="height: 150px;"><div class="row"><div class="col-sm-1" style="width:40px;"><span role="button" class="monitorBack glyphicon glyphicon-chevron-left" aria-hidden="true" style="display: none;"></span></div><h1 class="col-sm-8">Mangas and animes</h1><span class="badge monitor-badge" style="display:none"></span><div class="sideBtns col-sm-2" role="group" aria-label="Vertical button group" style="display: none;"><button type="button" id="edit-monit" class="btn cutebutton">Edit monitoring</button><button type="button" id="delete-monit" class="btn cutebutton">Delete monitoring</button><button type="button" id="stop-monit" class="btn cutebutton">Start monitoring</button></div></div><button type="button" class="btn cutebutton restartmonit" style="display:inline-block">Start monitoring</button><div class="sitesList col-sm-6 row " style="margin-top: 5px; margin-left: 5%; width: 65%; display: none;"><div class="list-group"><div class="oldmonit"><a class="list-group-item" href="http://mangareader.net/" target="_blank"><span class="badge" style="display:none">New</span>mangareader</a><a class="list-group-item" href="http://mangareader.net/" target="_blank"><span class="badge" style="display:none">New</span>mangafox</a><a class="list-group-item" href="http://kissanime.com/" target="_blank"><span class="badge" style="display:none">New</span>kissanime</a></div></div></div></div>
 </div>
  <script src="js/myQueryScripts.js"></script> 

@@ -1,0 +1,106 @@
+.well tr td{
+  padding-bottom: 8px;
+}
+/*
+img{
+  padding-left: 8px;
+}
+*/
+textarea {
+    resize: none;
+}
+
+.white-well img{
+    margin-left: 30%;
+}
+
+.panel-body #icons table tr td img{
+    margin-left: 70px;
+}
+
+table tr td input[type=checkbox]{
+  margin-left: 12px;
+}
+
+#share{
+  border: 1px solid black;
+  background-color: gainsboro;
+  padding-bottom: 5px;
+  border-radius: 15px;
+  margin-bottom:80px;
+}
+
+.comment_section{
+  display: inline-flex;
+  margin-top: 5px;
+}
+
+p{
+  text-align: right;
+  padding-right: 15px;
+  font-family: Georgia, serif;
+  font-size:20px;
+  color: #337ab7;
+}
+
+h1{
+  /*border-bottom: 1px solid;*/
+  text-align: center;
+  font-family: Georgia, serif;
+  color: #337ab7;
+  margin:0pt !important;
+}
+
+input#postButton {
+  border-radius: 10px;
+  float:right;
+}
+
+.socialSpan{
+  padding: 10px;
+}
+
+.glyphicon-ok{
+  color: lawngreen;
+  font-size: 15pt;
+}
+
+.img-rounded {
+  width: 100pt;
+  height: 30pt;
+}
+
+table img input, table img{
+/*padding-left: 30px;*/
+}
+
+b{
+  display: block;
+  text-align: center;
+}
+.socialTable td{
+	padding:2pt;
+	}
+.white-well{
+	background:#FFFFFF !important;
+	margin-bottom:0pt !important;
+	border:0pt !important;
+	box-shadow:inherit !important;
+	}
+.posting{
+	margin-left:10pt;
+	}
+.underRow{
+	margin-top:40pt;
+}
+.post-well{
+	width:45%;
+	float: left;
+	position: relative;
+}
+
+.postsPlace .postedImg{
+
+width: 80%;
+margin-left: 10%;
+}

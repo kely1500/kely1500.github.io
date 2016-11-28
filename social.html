@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+  <head>
+ <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="css/social.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+      <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"-->
+ <link rel="stylesheet" type="text/css" href="css/cuteCss.css">
+  <script src="js/socialScripts.js"></script> 
+
+  </head>
+
+  <body style="padding-top: 80pt">
+  
+  <nav class="navbar navbar-cute navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topFixedNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+      <a class="navbar-brand" style="padding-top:1pt;padding-bottom:1pt;"><img src="img/web_text3.png" style="width:60pt;" alt=""/></a></div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse nav-cute navbar-collapse" id="topFixedNavbar1">
+      <ul class="nav navbar-nav">
+      <li><a id="home" href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home<span class="sr-only">(current)</span></a></li>
+        <li><a id="bookmark" href="bookmarks.html"><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span> Bookmarks<span class="sr-only">(current)</span></a></li>
+        <li><a href="monitoring.html"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>  Websites Monitoring</a></li>
+        <li><a href="social.html" role="button" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Social Networks</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown"><a href="#" class="dropdown-toggle" style="padding:9px" data-toggle="dropdown" role="button" aria-expanded="false"><img src="http://i.mdldb.net/_s.jpg" style="width: 32px;
+height: auto;border: 1px solid #023167;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+-ms-border-radius: 100%;
+-o-border-radius: 100%;
+border-radius: 100%; "><span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+  
+
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-3 col-md-push-1">
+                  <div class="panel text-left cute-panel">
+                        <div class="panel-heading">
+                                <h1>Login</h1>
+                        </div>
+                        
+                            <div class="white-well well">
+                                <div >
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-left">
+                                                    <img alt="facebook" class="img-rounded" src="https://madovermarketing.files.wordpress.com/2014/05/facebook-button.gif">
+                                                </td>
+                                                <td class="text-left">
+                                                    <div class="loginok" align="right" id="ok">
+                                                        <span class="glyphicon glyphicon-ok socialSpan"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left">
+                                                    <img alt="Twitter" class="img-rounded" src="data:image/png;base64,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">
+                                                </td>
+                                                <td class="text-left">
+                                                    <div class="loginok" align="right" id="ok2" hidden>
+                                                        <span class="glyphicon glyphicon-ok socialSpan"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left">
+                                                    <img alt="googlePlus" class="img-rounded" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXcAvaW5kb4NzWVZ0bP2B-14j1yTPOKwqMzjAQ3cWiX1rNpYeM">
+                                                </td>
+                                                <td class="text-left">
+                                                    <div class="loginok" align="right" id="ok3" >
+                                                        <span class="glyphicon glyphicon-ok socialSpan"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left">
+                                                    <img alt="instagram" class="img-rounded" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRKCjT3aWqRXoP1RHH-IQ9jyH9c36eN8_V9eWpKb7jPORHhJeew">
+                                                </td>
+                                                <td class="text-left">
+                                                    <div class="loginok" align="right" id="ok4" hidden>
+                                                        <span class="glyphicon glyphicon-ok socialSpan"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left">
+                                                    <img alt="linkedIn" class="img-rounded" src="img/linkedin.jpg">
+                                                </td>
+                                                <td class="text-left">
+                                                    <div class="loginok" align="right" id="ok5" hidden>
+                                                        <span class="glyphicon glyphicon-ok socialSpan"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                  
+                  </div>
+              </div>
+
+              <div class="col-md-6 col-md-push-2" id="share">
+                  
+                  <div class= "comment_section col-md-12">
+                      <textarea id="post" rows="4" cols="80" name="post_section" style="margin-top:30pt;"></textarea>
+                      <div class="posting"><div class="row"><p>Post to:</p></div>
+                      <table class="socialTable">
+                          <tr class="facebook">
+                              <td>
+                                  <img alt="facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png">
+                              </td>
+                              <td class="socialcheck">
+                                  <input type="checkbox"/><span class="option"></span>
+                              </td>
+                          </tr>
+
+                          <tr class="Twitter">
+                              <td>
+                                  <img alt="Twitter" src="https://c866088.ssl.cf3.rackcdn.com/assets/twitter30x30.png">
+                              </td>
+                              <td class="socialcheck">
+                                  <input type="checkbox" disabled="true"/><span class="option"></span>
+                              </td>
+                          </tr>
+
+                          <tr class="googlePlus">
+                              <td>
+                                  <img alt="google plus" src="https://c866088.ssl.cf3.rackcdn.com/assets/googleplus30x30.png">
+                              </td>
+                              <td class="socialcheck">
+                                  <input type="checkbox"/><span class="option"></span>
+                              </td>
+                          </tr>
+
+                          <tr class="instagram">
+                              <td>
+                                  <img alt="instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png">
+                              </td>
+                              <td class="socialcheck">
+                                  <input type="checkbox" disabled="true"/><span class="option"></span>
+                              </td>
+                          </tr>
+
+                          <tr class="linkedIn">
+                              <td>
+                                  <img alt="linkedin" src="https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/linkedin-32.png">
+                              </td>
+                              <td class="socialcheck">
+                                  <input type="checkbox" disabled="true"/><span class="option"></span>
+                              </td>
+                          </tr>
+                      </table></div>
+                  </div>
+                 <div class="row col-md-12"> <hr>
+                  <span class="glyphicon glyphicon-camera socialSpan"> </span>
+                  <span class="glyphicon glyphicon-picture socialSpan"></span>
+                  <span class="glyphicon glyphicon-paperclip socialSpan"></span>
+                  <input type="button" id="postButton" class="btn btn-primary" value="Post">
+</div>
+              </div>
+              
+          </div>
+          <hr>
+          <div class="row underRow">
+              <div class="col-md-3 col-md-push-1">
+                  <div class="panel text-left cute-panel">
+                        <div class="panel-heading">
+                            <h1>See:</h1>
+                        </div>
+                        <div class="panel-body">
+                            <div class="white-well well" id="icons">
+                                <table>
+                                    <tr class="facebook">
+                                        <td>
+                                            <img alt="facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png">
+                                        </td>
+                                        <td class="socialcheck">
+                                            <input type="checkbox" checked/><span class="option"></span>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="Twitter">
+                                        <td>
+                                            <img alt="Twitter" src="https://c866088.ssl.cf3.rackcdn.com/assets/twitter30x30.png">
+                                        </td>
+                                        <td class="socialcheck">
+                                            <input type="checkbox" disabled="true"/><span class="option"></span>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="googlePlus">
+                                        <td>
+                                            <img alt="google plus" src="https://c866088.ssl.cf3.rackcdn.com/assets/googleplus30x30.png">
+                                        </td>
+                                        <td class="socialcheck">
+                                            <input type="checkbox" checked/><span class="option"></span>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="instagram">
+                                        <td>
+                                            <img alt="instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png">
+                                        </td>
+                                        <td class="socialcheck">
+                                            <input type="checkbox" disabled="true"/><span class="option"></span>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="linkedIn">
+                                        <td>
+                                            <img alt="linkedin" src="https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/linkedin-32.png">
+                                        </td>
+                                        <td class="socialcheck">
+                                            <input type="checkbox" disabled="true"/><span class="option"></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                  </div>
+              </div>
+              <div class="col-md-8 col-md-push-1 postsPlace">
+                  <div class="panel cute-panel text-left">
+                      <div class="panel-body" style="min-height:300pt;">
+                      <div class="col-md-6">
+                          <div class="facebook well">
+                            <div class="media">
+                              <div class="media-left">
+                                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTA_anuMvCbHi0sZay0s2I1auZ3GAsKKTKioDUjDapzhuo8Ptia" class="media-object" style="width:60px">
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading">Silly Joe</h4>
+                                <img alt="facebook" src="http://www.net-empregos.com/images/facebook_logo.gif" style="padding-left: 0;margin-left: 0">
+                                <hr>
+                              <b>I just got fired from Mc'Donalds. All I did was give a salad instead of the big mac that was ordered.</b>
+                              </div>
+                            </div>
+                           
+                          </div>
+
+                          <div class="googlePlus well" >
+                            <div class="media">
+                              <div class="media-left">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWgnQw1-OEUR34WCgjxcklPaZhy0x0hXth0QtL-1cUy5Rf2vmj" class="media-object" style="width:60px">
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading">Zé Manel</h4>
+                                <img alt="google+" src="http://www.onlinecontest.org/olc-2.0/images/olc_v2/style/share_googleplus.png" style="padding-left: 0;margin-left: 0">
+                                
+                              </div>
+                            </div><br>
+                                <img class="postedImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRceFScsUYmskXge8OCOXaodngJHzCNWnE-C1tx0EdKwcSHt6Pi">
+                            <hr>
+                              <b>Check this out!</b>
+                          </div>
+                          </div>
+                          <div class="col-sm-6">
+                          <div class="googlePlus well">
+                            <div class="media">
+                              <div class="media-left">
+                                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0HBgkIBwgQCgkLDQoPDRAIEBsUDQoWIB0iIiAdHx8kKDQsJCYxJx8fLTEtMTU3Ojo6IyszODM4NzQtOjcBCgoKDQwNGxAPFzclHyU1LS0tNTc3MTUtLTUyNys0LS03MDcrNzgvOC04Ly80NS0tLysrLS4wLzUrNysrNzcrNf/AABEIADQAPAMBIgACEQEDEQH/xAAcAAABBAMBAAAAAAAAAAAAAAAAAwUGBwIECAH/xAAxEAABAwIEBgECBAcAAAAAAAABAgMRAAQFITFBBhITIlFhgXGRB8Hh8DJCQ1JiobH/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAgMB/8QAGxEBAQEAAgMAAAAAAAAAAAAAAAECAxESITH/2gAMAwEAAhEDEQA/ALhooonXLTxvWbYVgtRkJR/EfP8AKKYcY4us8HdaF64pDalqbcV0yRbH/LwPBiMjTXY8fW2J8U2eFYapLzbqXw44DPMoTyhJ8Qkk/UCk9naa0Vh1AY8zHk57/rXjT6HivpOBRQYVGqD7+KdhSikm3FOrlKAGs+5R7l/H6/FK0HkgQDlP+61Sy6lwvKuzA/ppSkN/TzuM5pVyRMQJOcz3D1WhfLWtXTQ4pAJbggcqXN8lEGIgzltqDrnrQjP4uMi64PuVBA52FMO8xiQObY+wTVNYDjYwbGLTEG2ZDLji1oRCSQpJSUhWZ0OU6a1dXE9mMV4avbJDpU+62Uw7JBUFApUCScgQQTMTM1z84hTTi0OJKVoUUqCtUkeftVcdmka+ug+EuNrTidLls22ba5gJDalw4U7cp3gHapQmUPdNJHOuFLI0EafXT9iuX8HuHLPFbK4tV8j6HmSgjYyBn98xvXQ9kVS44811C4trpJM8pSJ1E+CSBp6kVzd8a7m9pGFhRIn/AJWVa9u8HhLRChkZSe4j2I9HXxWwM9qqXtRMqUkmYKQQdIgfnFNl7cpVarbWgqQJDqRA7R5JO+XuCSYp2UkKBBGtJC3BjqCY0BPaf3+VTrNoYyQw/chSy62WkhRWlRSgZwEiBuTocxvlVHfiGwGeL748vL1+g8QcikqTnIyjzGWtdAuWCUOWwQklKVdxCQZO06HzGUCTNQnFvwnt8S4gdvhfuM2r3UW62nudU4STKVGYTmMiD4pxy5qdS1Slm6lm8YddTzNodaUoZ9wChOh8DzVxs8YOPstu4bhN86hDhUlVraBDIT6k55A6n3tNSfDOAMIwpaXLfCkuOIghd2ouKB8jmMD4H0p/dZUp625R2trUtXocsafIpuTRJYiKOM14Mwh3HcAurKzWttIdHSWGyrJPMlKp21idanAMgEZg02XeGsP39n1rNt9LZdcR1UBRt1/3g7Hb7U56aCqihRRRXQUUUUBRRRQFFFFB/9k=" class="media-object" style="width:60px">
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading">Mister Whiskers</h4>
+                                <img alt="google+" src="http://www.onlinecontest.org/olc-2.0/images/olc_v2/style/share_googleplus.png" style="padding-left: 0;margin-left: 0">
+                                
+                              </div>
+                            </div><br>
+                            <img class="postedImg" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxQTEhUSExMWFhUXGB4aFhgYGB4gIRseHh4dIB0iIh4lHygjHh4lIh4bJzIhJyktLi4wHyAzODMtNygtLisBCgoKDg0OGxAQGy8mICU3LS84LS0tLS8rLS0tLy0vNS0vMi8tLzAtLS8tLS0tLS8tLS0tLS0tLS0tLS0tLS0tLf/AABEIAIAAoAMBEQACEQEDEQH/xAAbAAADAAMBAQAAAAAAAAAAAAAEBQYCAwcBAP/EADoQAAICAAUCBQIEBAQGAwAAAAECAxEABBIhMQVBBhMiUWEycQeBkaEUI0KxUsHh8BVicoLR8SQzov/EABsBAAIDAQEBAAAAAAAAAAAAAAMEAQIFBgAH/8QANREAAQMCBAMFCAIDAQEBAAAAAQACAwQREiExQQVRYRMicYHwBhQykaGxwdHh8SNCYlIzFf/aAAwDAQACEQMRAD8AG6x1ErWtlDqaUqaI/wDI4uwMdFUUcdQMBFweeo9clzPDqqanfjgJHMbHxU/4nzOsmUkFmADN3LDYkj3Irce2GKGlFLTtgabgadBy8k4+o95mxluE8kn6bnFQ7k9zYo/sf9/BwWaAvIcCVMsZdkvs/P5xaSOHSqgGQqNhewJ7CzxgjbxmznZlEYwgZ5oENgy9ZZh8WUELYJMeCoWo7peQmnfRBG0j80o4HuewHycCqKuGnZjmcGjmSpbE55s0J9nun5nKrUyaLrTqAP301e+BU9ZS1vfhdity/KFLSviF3iw8dVNyObN++HhlovWTLoPT0mMjSy+VFGtuwFmzekAe5o/ocZ/EK59O1oiZie42AvYdSTY5BN0tKJSS42A1KX5qRdbaCSpJKkijR4sXzhthdh72qBI1uI4dFjAIyshdiCFuMAfU1jY+wq8Ble8FuEXzz6BEja0g4ignbHnFQAtDtgLrojQtDnAXFFATTK9Jld1hWFzIyhgNP9J4P2xn1EzY2lzjkFLXt1QnVentAdMsToTxY5+2FYKyOo/+br/dHCAZ4/Y/vgjrqVrd0rg32wI3VlXHOMfqYs18nf8A3xyMdLposHsgDkLBYS5iOWF1e1lQ6kYf1A0GVh7cEHm798VJcJA69wcrcuq0KeFgY7LPX+Eo5GG75XVdCm3TRIcvmDFIKGkzR72UB2Ye4DHcfN4Un7PtWF7dzY8if3b6IzGu7N1vksun9DLAs7hNrAA1H89wBhwhrRqsyaswGzW3+i3eLspDE0aRv5klHz249VIQNNkLVsNjvvfbGbRySSYnH4f9R0F997rSlaGgC2e6SwkahqsC9yOQO9e/2w+DzQCDbJUKdaOVZo8rITExDEnkmgKJFWBW23c+5whNRR1Tw+ZuYuByt+OvgiU1VNCzKwPh+17m/EcjQGFvUSwYONq9wfcEdvzwWOijhkDo8gBaymSrfMwtkzPNItffDt0rZbEnIGkcEixZ3q6/uf1xFhe5U9FqJxW+S9ZYVZrFCrL7MwMhp1ZTdeoEbjkffFDpfZS1wdoUKQDsdr2v2wByM1Oc90gP5kqbhG9aDb0iiabeqFb1/aiAZi5+uhS7Z8DmsdurPpn4jSSsQFhgCBfKU0dQBsgyEA2SB7DYbYwK6ncQXBxv4ZfJNRsEYAaP2pzxD4j89BFMhA0Ve3LMXJH2oAb9zjHhgMcnatOd/wCEZsZGd1AnHRkq6xOBuUpqMy1VeOowg6pMxtWIk5+ecSr6aL3XiCVWyM6Z1R4CxQj1KVNi/wBjz9sDmjErMDtPXrorseWG4XQYPCMfU8sMzkdMGYqpYQaRz3r/AA7/AHB/fGC2smoXdnNeRg3/ANh4/wDofXxR3RteLhTuX8F5+eSW4tEit/MEjaSSd7A3sHf1cE384ddxWmhDQ27gf/Ivbx/Sp2D5CSVhn/BWchjkkkipIwCxDA7E1t3Ncn2GCxcVp5HhgJBOWYshvpntF0kAGkGwbvbD4fmQUu4LfkMo0z6IwLonc0KHzgl8roMsjYm4nHJG5DoE0pZUUWhKsCaIIJB257HFXyta0E7qj542EBxtfPTZYSdKbQWQ6qJDLVFSORV4UPEGNfhkGHrt81pNonSNxRHF038uaCy0DSHSqkn47ffBp6mOBmOVwA6oMNPJM7DGLlPMr4NnkHK/PP8A6xzU/tdQxnK58ltN9n5wAXua1WsfRs5Jl2hmdZARQ9X1fdTsp9iPjGcPbHh+O+Fw8llzezckb8cMg8M/ouZ9d6DmMqQJ4yoP0tsVb7MNr+MdDR8Tpa4Xp3hxG248l6SB8R7wQGVdiRGHZUY0asjehen9L70MMFocQhOOWK17J3P4WChdMokkYqoVF1epg+kLR9V6G9WwFDntjcTq2RjC09Sb2C9RSPmJu2w66n9L3N/h91OJDOYiQaZgrB3Fdyvcj4vHOQ8boXv7MO+YsPmtR0TtlGiMswVQWJNADckniu5Jx0znta3ETYJYJpmvC+aR3iaKnTSWWxfqBIoXvwcJRVsE8fascMKK2NznYWjNCXjsbpNHdN6TNO2mKMtzv2Fe54H54BU1UVMztJXWH36DmVdkbnmzRdNJvCk0ToJWiVGbSXEisEJ41UbAut8It4rFIxzorkjO1iCfDrZEdTPZ8Qsqvp/gTIaNUvUdZoEeXojXf5fVY+dvtjHn4vxIutHCGj/rE4+YaAB8/NE93jAu532VT4ZznSemKB/H+Y4JJ0m+d+w3/wA/bBXuqpziMZuelh9So7oFrrofQvEGWzi+Zl5FcD7gj8jhaSJ8Rs8WUg30TGVcIVEZI1V2lSPU/DmW1NJ5EWs8toH9uP8AfOMySepsIzI4AcnEJyDCHYrBcl8USy5OUokSQF7OqNRplXsd91K913Fn537zhD2zQC0hdb/1qPH8FZXEWRuIuwD6/VSUU7KSVZgTyQSCb9zjYNrZrPIB1CeeEo2DM5YLHVNq4OM6skiFsVsvVloUMcrnXYnEXXY0ZgixuoOxO3P3/wB7Y4eu4VJI8vu4N210/C7KGtg+EuGLex1KMXxKzEDZfsOMLw8Bidq8ojqiIDIfVFP1lgCyyo1ci6NfY1iZvZ+No7rvmoFVD/s1Lc14rMimJoRKrbMrNsR8UDR9jgMHCZIJBKx5aRuB6uOaXqJKeRmED+lFeIunLBKVVtSkahfIHsff798dtQVb6mDFI2ztDyPULl62mbBLhY64XbPw98ILlIVkcf8AyHUaz/hHIQe1Xue5x8p4/wAYdW1Dmt+AHLr1/Sbp4hG3qq9UA/1OMC5KPclS0vRunQ58ZxmjTMOKUFgBq7sB/jI2vG171XPohTtuWa5Xvbkem6H2QBxFJfxTSHL+T1BlLOmqNFHDs4tdR/wrTGu941PZeZ5dJT88/C2R+6FJ3XBy4rl8qXHpI9qvfH2lkONt/ocisp8jWarwTPHYB0+9d8BkxNOF3q6uDcZLXJMWNsSfvgd816yxGJuvLdlowzBSwUHubr9sTc7L2S7Z4G6tJlEAzLwuAoEehSHIG252G3yLxxHFpXU0+GCNxvmQT3c9xqQVs09D2zA8PFtjp/auI/FUEi2jWasqeR98DZK14VJaZ0Js63kUufr8b7Cw3GnnCdSMGbtESNuLRTfjHKjNweWFt/qSuxH+R4w3w6sFLKJSe6dfD1mhVMONhCiPDseQ8qs8wJLAx+STrUV6g+wXTxQJu7x2VQ6Yn/CP0fDqsiJrP9yFWdU8P9LngqDMNEVGxLWP+5Cdx9qOOZmqa2jmxujxjlazx4X1WoIu2Zga4W6HL14rnWXz0mTkePTEWU0bGofke6nn88dJG5lSxsrSbH181lnFC4sK1ZvrTOdWiNPfQKB/K8DdQQk3z8kUVsoFghznQeVv7N/pgLuHNP8Asfkr+/P3CIymcULIxT6V9NHayaF7fpv24OE6uibEzJxJOy8yqe4rHw2Q+chMgaQCRWZRRLad6F88cewOLcUvBw97Y7Du2vsL5X9bocXflBK7vk/EOouW4Bx8gkocIAG63HBoaClXVvEVmr27AYap6GwV22GiR+M4o4umTSSAa5RpW+bJ2/TnGjwt0ktexrNG5+SXqfhuVw4nH0AhZys850nylB81q9zEV9XYUTqH3I9vfHZt4u/LGy/rzFlkdoC7IA+Dr5dUi6lCyEBgBt6SO4wrV1fvDhcWt+U3A5rh3SqTqXRBPDBJAkUWouqgtXmKoSiSdtVk398c7RyTwxufUOLs9hp4dFp1EcZP+IZfdTObyMkZIkjZKbSbU1q5q+Lrf7b41Y5mSNDmm4OY8EjZe5KYK1sCR8e/IwdjrEKjxcWCOzPWpXcPqpl+lgN96sfbbHgGsJDNFDruN3fLYW5Ko8B9WEUsk5WWZyPUhkVdVdySCxq+Bj0lE2ojsSAL6kX9eajtmxZ2JVr0bqMXUmbQq5eZdiASQb+dtj7/ALY5ninB5aVwDRdp5iwP3WxSytlixt1G2/Q7IzqvhORIneeNpEC0yRbsR3obX9sYIgwuLiAzqchnuiOqbtw6rismYty4HLE17WTtj6JSP7AN3sAPosCUYnHZbD1WQAKrUBZA7b/HGPVRiqHYnxi/O5XmFzRhBQ2azTSMXdizHkn44wCONkTMDBYBWc4uNyrj8PumuV8zyogLOl5Ig7H/AKQSABfc3eOR9o+KRRP7IFxO4DsIHjkSfDLqtCkiNsRHzW7xn4ZmlbzfMgJF+lIvL2+SCQSPc1hThHtFTxDAY3AH/rF97EfVTPTF+YshPCvh0yZedZYrKSjkdioo38b8e5xPHOKhtVFJA/Vp+d/6XoIe6Q4LDoPQxlc/G76mSm8nY7yaaAP5FjfesGnrZuK0RghA7QkXzyw31/fJUwsgdjeck5fMyTSrCmkNISse5o6eaPDAdyMYM1F7oxz5CCG62INr/tHjqGy2tfzCbDoceXYGeXU3cKLP5XWMz3t84Iibl1WnG3K6lPxLkizkfmwSS3lgNUTKSpViBrUjYEd/iuO+1wHtKSTBK1vf0cDncbH8erI1QJzvouXEY64pJX3Uer+cFi8xnN6yTvpBFAAk398bjgAb2yAtfmVgsg7O77W2slGYg0o1gNRrda3+D2P64ggYBzTUbruFskoaUgadZ0819r/8nf5PucUJ3KexEiy6D13q8a9DymXCgyeYrf8A5Yk/vX54yKGJ5qpZif8AYjyAH9pmdjWsaBuL/Vc9uzsOTwP8sbd0oic3lGibSxXVW4U3Xwa74kOuvEL4RMF1UdJ7/wBtv88MNL2WcLhBu0m2639Oz0kMgkidlYdwf2+2JmnfNGY5DcK7ZHMN26ro/TvxZzccYMqBxYpvfnY/pjAm4Y8DukHxTArI3OsW2PRT/wCIeZgzDw5uAIvnqfNVWJIkUi9QI22YfocE4fG+C8DhYC1raWPL9Kk7mvs4JX0vwvNmJHSHS6I2ky3SfcE4rX8Wp6JgdMbE6DUnyVoaSSX4QiMz4UqaKBczHK0khRvLDeigCTZ52P64Qi9oA+nknMZaGAEXIzJvYdP0mJeGvie1r9/su3dL6IkaqDsAAFUdgOMfJ6mtkleXak5krQIGgR0kcdfQpA+BhYOkvqVIapjxJm5UjrLkRAk3pUb/ADjYoRG547cYrcyVSTIWauL9Z6vmmkMc8zEo3ahXyKrt84+n0FJRxxiSnYBiHn4LJlc8mzl0TwL4xgh6aVkajlnAVivKsw3Ub+pQxBA3498cdx3g80nEsUWYkH1A0PjbJNU8vc7wWfinJzRuJL1g+pXHDA7g4z6KSJ7cFrEajcLRfIXC4UbnuvSZKXUtecRupGwDc6h7H2xuwUDatlnfCN9/L9pR85akPUs7llsQx6mJJaRhW550rwq+w9qxuwxvaAXO02/d9T8kqXDYJ54az8iweQWQxSmlTyg7LRtiCBagj3snsMbE3DaaSpbVWIIByBOG3z15fXVZ1RO4NcwDz0QJZJGdYRIdP9RIBA96rjnnDULA9t72t5/kckCxjAMhGe1kFncvUZjMYDaw4kOzAaaKVdVdG/jCklO8y4y7K1rAZHO+Lx2TccrLd1eZrNeeEAjWMRirBNAUAL9zYY/Oo+2DNYG3I9fzt1R3vva6yHTgApIY6iQCGC8VfpKnixyQdxxhunhdM9zG/E21wcjY6G1vHfZLPfYXyt8x9/wtedyGgagwKm6vZu3b8+Ri9RTugcA4grzJcey3f8R1KVYL6ttzQBNUduw9uOcS+qHu2DPu/UDbxVOx7+Ja+pZJoJXhfTrQ6W0mxdXsfzwlTVLKiJsrNDmEVzbGycwR6o9TUIx6r2+qq++19u+G3EbrPsR8OulkgnZSx0AgdrNn89v2wsSnmg7ro0HUDL0zLxZYU41rKb0hSoBNkkCyCDzvZxwFfRFnEZKioN2m1t8vJddwqpbHCXtFyBYDqlHRZP4bqC+enlGKMltZoDYUTWx57GjjR4m2ObhZFOcQeRmN89FkCZ8lTik5FdHTrTOTdk44E0gYE2XbBa5us1ziW0t1UOQPU+rL5RkchUG9nDVPSPMgYwXJUOFhcrkXX+pJM+pV07k2ask1+wAG3bfH02kh93gbEdh/ayXuxOJSuWVqCliVHAvYXzQxYhoJNs1AK3SdYnMSwGaTyl+lNRof6fGFPdIBIZcAxHe2aKJHWtdAn/3gpNslCwJxUlSrLKZaBoL/AI5dzvBRjJvkFt7HHxhyaqlJDLXH0+SzyHB18GfPX5IDNZcZealljsC1KkNXsLG14Zp5sbHHQqc3s7zTmhD1RyxMhVifcc++LMeN/wClf3doFmZLyDNEt6EFD6fZb7/Jxbhz5p5i6JgNtCdG9TzKJKxrWWcfHmeiZJEALZ65JLdyasge+w4+Mb0lTDSNwk4nHXmfW3JKAOfkBkl2dzAcjSPSBQvk/P54xpqh8zsT/wCkwGhoWzpubeJ1eOvMOykgEg/AO14C8NcwtcLgqQ6ywnhYepq9RJ5HPJ2HGPDu5aKoIOitOi9NimyLLqEb6gJJXXUFU6dNDahzv2xkVM83v4aT3A29uZ6/hPU7I20ckuEFxOHw3+y2y/hfK0ZaLMIzCwUdChsX3DMO2CN4gDq1I4gDYoHqvVJMtEkaRFQAFYObKOL4FVyGNg78bYyY+E9tO59Q+5OeWQI6n6W2Wt/+g8U7WR5Ab73U3kNc+YUMS7O3qJ3v3v8AIY065scNG4AWDRkk4S50oJKqs/4leEqsdbbNXsO2OPhoBMCXBamLCl03iuzbCx7LW3+vxxjTpuCF2bsh9T4JV07WaZpf1Dr3nXGVZ9VbE+oMDtpq/fit8a9Nw+OkBc0+fRXlrRJH2ZZl01v+V2zwv4BymXgRZIY5ZaHmO6g23er4AOPmnEvaCrqZi5jy1uwBtl+1McLWjRAeMfA/TXhYkJlnHEiDg9tSjlffBuGcc4iyQZl45H8HmpfA0hcgyPheZs4+Q1RrIv1Pe2kCyVPyDfbjHdP4nCKVtTY4Tbx13SRbZ1nLoc/i6AIMsuXCQqKMXb/ur6jt3wGk4EHE1AkJdri3/jyXTUcFLg+LPqAtvTD0qdqfLRoTwwFfI2xl8SoOJQxiSOUuyzB/CtUUGJncIPlmjfD34XZARr5rHMSEeptZC37KB2+++Mqu9qq8yHshgbytc+awWQNAzXP/AB/4QOUzLrl4JWy4RX16GYJfI11wK7nHX8B422rpgZ3NElyLXAJ8ktNEQ7LRfdE8Tw5TIMuXiAz0jlWlIvSnIZSbo70BtvZ7bxXcMnrK8Omd/gABDRlc8j9/DILzZAxmWqmUzjKeASd7NmyeT98dayuLIxExtmjYE2ShaHZlOeneKp4k0Bcu4u/5kCub+53wk5jXHEdVUgaZoTOZo5mSyiKatvKjC2K32Br8/wA/jEsAaqZRDp1KcdCz0sTDyoILcaBGd2fffe7PztR4xDICWm7r/r8BBmew5knLfks+q5FokE0uVVUDemNmbURfYkEaV1DkUdsVEjWENCqx3aZNejOlZx381omXURRDUAOOaAWgARsBxhaohe6QSM00TENR2URhfvmhn67mcsq2QFGyrqN+/JUgDfv7YWdSlxte31/SsxzHm6Rddknkbzpoims86SAT833/AL18YYpHRC7GPxHdMPje0BxFglUeYKHUpIIHIwadrHxkPFwojJDrha/PbSHaipY+3IA/PuMKMqcJwDblkiOjDjfdZMd8PYgRcIVrLtfgPK5KTpmWkmVLilGknZhLrFAHm2Nbd9sfNeMy1rOJysjJs4ZjbBb8C6ciazDcqu6p13y+F7d8c7DRh+6faGltwoTxP19JUto/WOH1VQ72O+N+io3Ru7rsuSFjCgPFniZMyEKxhJk9LSral0ogrtsR8nt98dRw3h0lNcPN2nPCc7Hmlpnsdolud69mmZXkayUoEqBqA99t/ucaVJBHTXEGXmhNcW6LCHqUhBYKKHO/9vc4mSIPzN/mjtrpWZXVj0X8SgrE5iOQgD0iJlAvvdgfreMCp9mHOAELhf8A6B+maqyYN1CMk8az5+SbImHy4pmVSPOGqJQaeiwp72ND2NXd4o3g0NAxlWHYnMBPwmzjtkNLetFV0pdcc1P9b8GZnLKWkUvD2lXcAdiQNxf3ocffq+D8RoeIvETHWfa+E63Fshz11uNNEvNDJETkktZdYXBWQ5gsANwEVa57lnscGgL71g9TFUR1Ib3Qy3ib/YDnqVUEFt91py2SZl1CtN1Z23xLpGtNlUuAyVr4V6JmUy+Ymy8wikVVZmFMSi69QUe262TjLruKRU88UUl7OyvtfLdQ2LtmuJF8Og39ckT4V6PmjI8mWnSOSQb6FUn9CCFXft2v2rDlRVRQU73S5Bufy9ZJMOxua1ovfntf7onxL1ExH+HVjmZB6SXUEMw/wxj0qLvgfmcY1HxGpnYJSAxpztrl1JXeU3C6Skpu1mYC46BBZiR0j/iFWP6d1iceohfWCndeASNhv7Y2qWqY8Fr/AIvwVxVfGHzYoxhactN+fRAdbQIi1/MUsZAD9OjSStnkGjW3Yfpd7s7eP3QY7km5sdP2gvEEuUkij/hy/m7WpLkmzvd2L44JvC8McjJSTbCegCPGZb2evfC/WIYYcwk0CyebGVjOkEh/Vp3P0jfkewwhxWlnqJIzE8twm52uN/E5fVNxODdVJR5Q1Z4uvv8A6Ydjj74DvFec/LJEzyljZrgDYUBtWG2gNFgh3usGlYDTqNA6gAdg3vXF/POKYWOOK3Ty5eHRSCQr7Mfio0kKpLlEeUCvNMhAJ99Gn9tWOUb7KtZKXMlIbytn87/hNMqMI0UX1nrkmY5AQV9K8H7+/wBsb1NQRQfDmeZVXylyNmjgV0kAGkIX0USGPYb+xP7Y1eJNhip4zEbuOR+mZ80jSOkeXB+xQWYm869Z/q1AqLIG9jnvvjGpxZ1uaZkOEXCFLhdlaweQR3w4qWLtVR+OvBsmRYEMZYjX8zTppj2YWRvyDf74sJe9hcLcutvyN+eoQYJ2yg215dOaky3ucFabaJlXfhXx1LCvlMVIHp0HYFe4O1fltzjn+I8CjqHGeNxx69b87rSpa2Nreznbdux3CFk8JSyrNnIY6yqksBqUkAfUAL3Cmx+XfGrT1DmRNEx73rM+Kz6rBjIjOWy09KludHlj8yOtNAlbsencfTvXfvgpcSO9qk8IaMl1ToPXoIc2+WcwxmgqDTTla1AOwJVmG4YGmG13jnfaClfU0dmatcDb6X+R+iapLMOI8ll0zoqZSfMGKayEVlGhtMaOW9QokNsv3JVtwNhn8WqXVEDIi0km2I6Zi2XmfLPdM0kLGPxv20H2T7wp0bLRxrND6zILMr/Ub5/6fsMczxSvmlkMTu6BlYHLxWhLUvn7zz+glXjrw/EzLndFtEDqEdBn9rYsBS3fB7841vZripglEL8wdM8gflus2si7SM2P9KP6ssJjZjHdrQUemvdKU0NO+4+eKx3z5Wk3CxGMcHaqa6T4V87+c5MWWDGpLFOVBJVb3saTvRG36eFYYrO3vknrFbeodDjWEukiyLFSPpTRbNRBBJJZgN2vjUtXhdkzpZC7PP8APJFc7QWA9brL/hqSEsfSlkRqzVZI1EXV1Wkaq5/bUDQwd7bJKufbJLM74XzYj/iGgXy/aNl2A+ATQ+e2KYui97xHfDizXviXwi+WWOWNxPDICVdRRFVsws778j2PGKGSx7yvTSGc4Wg36XPrzSfK5Kjcysq/Ng78GvbECRrjYFGlZIxt7W8Vsm6YLBXTpI/xX++LBrnHC3VAbOB8S8nkQI0ajfvTX2P5YHLG7CW30zRmHPFZD9EjWSQRvJ5SspBYJqrvxqWh83thPEW5hFcMk8yGVyFLI8+gm6EsLaL2Fehn42NH3+2KyF7zYGw+qGQ8ZJr0v+JzCNcjMr7Mzkm0PuDyQNhfHOH+IVsdND2cmbjt9j56+VkiynHahwFrffkqXp5y2W9CQoD/AIhyf/Fe2OUjqJpnXeb/AI/afkItkqOXJ5XNoFljW6oEjfDPaFrrsNigh7hqoHxD4BMDAq5MF7iia+w9/v8AffjDsfEBJ3ZBn90Ta7PkgMn4mqMZePKpPGyBC0sdvZNXa3Vb7D474be7ETc2VGstnv0RHhrwt1CON9GXIatw1BmA3C6SQef74SfxOGM4cWtuqs6MSEX2VH4f62ksJGag0RISIxI2lNdmo/MZQDuu+xoge+E6yIseyVpxA6huZtztcXtt0JTfaY2Ybd4bo+D8RFBMSQaAgbWgSyv/ADXYWhYPb4Au8K1FDDMRI5oz0P7Ui7RhQ+U8dpLlswP4Z5ZGZYyjFPQhApya2tj9gaPbB46JsLThsAemlvv65obnAGyUZ7pKxyrl85m0gjsMkKMXbU9D6mStqHqIF1XzhmOq/wAN4W4stSLKnZ4nXcgvFvQZ8tBWVMzZMKzuGlU6CWCsKB4JA4HfffEUtYJjZ9g4bC6thtmpvIdSMgaJzqJQqh0qtCwSPSBamrIPONSKM4rhDdZVXQM2kjCOG/OKgIxWyBdEAf8AMdztt74ZfKZCSk5Wm4G3LquhZTwf/Dw6ZHcu16jHGrVyf6uaG3Avah2xmzV7gbWITLKFrvi1Ul0XOS5mZkysCRDuzKBXYdv2A57YxZKHtf8AJO+/TZdr71RUkQiYS62wyCk/GGaMc7xSOsjg1am+w59vtjSpC1jMMI7o30WFVTe8m8oFuVtEhk6cS2mZjGxHojo2b/Shx2w7HM475bm+SzZA1uTB5rRnkjIHlIy6QCxNUdva73wxGHBtnfRBvZ3xXB6J/wBA8KRnKvNPN5cjsEiUjZD9QZ/hhwOD88YVfJbIIlziyU11npkkRDMVZXvS6fS1bGj8YljwcuSIE28N9ebLkoxBjbkE8H3xeupW1ABtmEA9E6kzoL6iftjJbTlgsFbUJ/kesg1vVYo5hBQS1U/T+tK6+XJTKdjgJDl62HRauk9MigzqyX/La9LhgoVj3O257bngnnEyPLojG42/KOwB5xbpzn+sB4nmySjMswAjKj0ij6tTWNzf7ADc4VhoQ3OUZ6+W3miixJX0eRcRajnZhq1jRqEml3pqvc/yx/TtajbTvelKTYYjb+PWaq081C+PfDALGWAwJLHq88pRBjoetlr+W6gCxVvr2rTg0EwJwO8uq8QQp6PrUOWkiUuXUHzGlWMBX2oEKHBF9z7j6a5O2IuBB05fyglpdd26+6hm45J4/JyxecgLE1qVYggs77fWBvdn6hYBHqF7u5l8LrN1tqfLp5bIjX2F3InxZkcx5QlSdH0IsbxRxFQAdxpDFg+/9QCnfF6eGNudtTdCbUtecKrfBfgjJ5bRPmj50jJqWxShgfXtqOrlADXcg7mgaVzw1xGo5db/AKUMlDnWOixzvQst0rzs5GJPPFmIMyiP1sAdK1qMa3Vn7YAHPcwAm+maM34tEd4B/EA5h54s226VpAIbYkhvUKuiB2PPOBTBrWguvYozAdAnGc8aZWJJHXMxzsAdCRp9IJP1WzE1Xuo59xgHeBs0a9LD+UXBfVcv6Z1bqc0bnLZXUp/rjhpfYi6Ak5Ow/wDbLYI2EElVe4O0C2Zbpc2agiy8MJjlIbSjR0YwjABml2KGweV71e+DRydm4h2YQCb3ACFzv4d5mBkOZkjVDwytYXi9TaaHPB57VyDPrGuyaqMY1t7L4ZJV1aJjtpbS5UaioJ37sTe/cavzwndx1Hroi22Ud1GUa6PpQndVIYDfcjtZIur/ADw20WHVRfLJD5TKGQ7UAOWY0B/v4xotzQ3Owqi6T0OZkYiSPSPpsmzz2rjbe+MK1EejrZlCM7L2ReZ6JmIk84KXj41LsQflCdXNgHe8Jyuia7CXDp1RGnENLIaDqzKwWzZIAU8/G2I7NpFwpLE86T1iaT0CFpYjYkJVilAWbOkj9+axV0cYycbX0zz8lUtLcwVT9HHT0y5d8uuhARpBJL6q9G7erUVGxNbYtA0taXzevJee67gGqcm8eNC4JiMZbW0kKEKFVyvlgHkPVlmYAnahWKSQtl+HIf2iNbbdIst15JI3WUyldv5SzMQ5JOrZiSXsiueW47kMTri2XlmpeTsqXokqOzo0cTiG9CqyltPsV+gyODVBwTuAwoXfBfySh1yOvNTUnVHr+KSOOALtCVWnZXsH+qjRo7/lti4bhACKWA905qy8LeIkzTG0lpAoUIt6pWulAo+nY3q42O2JllsO8bJdtGIzdu6pcz4dlkgfWmXG2nyrIK2QXHmHdz9OkWgu9xYxmnisAdY+BPL14pltM7X16+amfFU3UsrL/EStC0delGNPIvceXqJrbizXNnu2zDI3EDe++ykgXsdUF0Lr2UnIEsOXklkBLo9BV073rItjpvahVbHc0J0bmZhWsRunU/hjpM5ECxhGIDF4mPpu6G2oAngKfY4uHPA/aqC9A5vK5jK5STL5R2l/h5tBuMamZ2sbW267AEex42obryyYn6aJ5oDGg7nNbvB3WM6TmImYLmFWIK7JqsXJRYrWoCyVPG/exVJIm5WKWqMN7gW5oHxb4i/i5IsqZ9GgAzECrlFWRe1C+b3B+MWjjLO8N/WfNXZYNsAkmc6plCNLuskY4RY9jXHrNN7du5+wKYXkGxt11KpqNEo6nk2mqVXEgpjuANr3JIAHYCqH98S12AltvkvDRH9GyOZYRw5eCaVGTUyn0g3dtZFae1Y0JZW3LDmBy19FZ7sBJc4gFdA8O9ZPTZazuVSLzRaNGwOnQK01Y3Njj3O+BtqoprxtuCM89M+WqqwAHE04rZdUL+K/WPNEOYy2aIRbDiKX+YNRpeCDRI3Un2NYVkjBkLXtvcZXzHn+PNNMcCLj6rniZ6KTNBMyqeWw0F9RFXX8wt6yT8YH7u9sZ7N1jr0y2tlkitOSLmaPLuY0kjlWVShnQM4WPjSqbEse5sWewHJqdxe27wWnkefl6shPzPgjsz4TzUsESrEShbeRvSlgEXZNgc71XO++5ZHWIPP0VRkgPevZBdQyeTjpGzLZkkgmOGO2Zgu+qVjekHgBSa9sUYcuXVEBfa9klz8q5aVxl2OlwKO2wJsqQbv20nisXaCW2crN74BKGk6i7KEZ3ZPq8u/SG99NBf2x7BZWDQDcIzJ5hpCYnkOhmFkn6Rf9N7DnjEtjuQ0KHd0YgF2zw/1+CWF4IKyrQ6VZQQoYAXqXaraip1We+4G/K11LKJcbjcZ5Xtv6Ns0eN2IJN/xWXqeehiH8k5YM058wkOraKUUebVrNbbb4mSNlNSl7sychcaWurXuclI/ibkM2cw7ZiMEDUIHBH/1r+5IBXnufyGrwx8JiDYzmNRyPr6Kj1zxHI3GNRVVL4W8SPCxVpQiNpslCR6boaVG13zRrfY9huYCqkZ3VmnXsxINSsoEbBv5a6aY8O31Bmonax35wq51rW/tX7XmvV6yjt5pUKTdMbFs3p232PG18sarFA12I2zuokeXWvshvFuVykyLMRplfkmMr2NFwG9Ncb3ZIvkYYjuCc/JAY917Wy8VzSeAg1pNjn/Ovj7YZR0Rlc+VQqWJUjjY1+vH37YrbPIKcjqv/2Q==">
+                            <hr>
+                              <b>I love fish!</b>
+                          </div>
+                          <div class="facebook well">
+                            <div class="media">
+                              <div class="media-left">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd39L8f-LPz3yKRb1wEr_FDZk3itYFB10fJFvP0RvidBvjxBEEjg" class="media-object" style="width:60px">
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading">Clementina</h4>
+                                <img alt="facebook" src="http://www.net-empregos.com/images/facebook_logo.gif" style="padding-left: 0;margin-left: 0">
+                              </div>
+                            </div>
+                            <hr>
+                              <b>Just had an amazing trip with my family. Pictures soon!</b>
+                          </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </body>
+</html>
