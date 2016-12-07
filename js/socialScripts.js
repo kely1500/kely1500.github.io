@@ -2,8 +2,13 @@
  jQuery( function( $ ) {
 	 $("#postButton").click(function(){
 		if($(".posting .socialcheck>input:checked").length>0){
-		  $("#post").val('');
-		  alert("Your post has been published.");
+			if($(".posting .instagram>.socialcheck>input").is(':checked')){
+				alert("Ups... To post to Instagram you must have a picture!");
+				}
+			else{
+			  $("#post").val('');
+			  alert("Your post has been published.");
+			}
 		}
 		else{
 			alert("Ups... You have to select to which social networks you want to publish your post!");
