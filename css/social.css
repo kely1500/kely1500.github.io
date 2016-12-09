@@ -13,7 +13,9 @@ textarea {
 .white-well img{
     margin-left: 30%;
 }
-
+ .white-well #loginTable img{
+	cursor:pointer;
+	}
 .panel-body #icons table tr td img{
     margin-left: 70px;
 }
@@ -29,6 +31,9 @@ table tr td input[type=checkbox]{
   border-radius: 15px;
   margin-bottom:80px;
 }
+#share span{
+	cursor:pointer;
+	}
 
 .comment_section{
   display: inline-flex;
